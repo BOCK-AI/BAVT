@@ -183,6 +183,8 @@ or
 ```
 
 * Press **`q`** in the OpenCV window to exit.
+* OR
+* Press Ctrl + C to stop the program.
 
 ---
 
