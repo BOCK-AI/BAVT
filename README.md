@@ -2,7 +2,7 @@
 
 There are two documents here:
 1. LiDAR Top-Down Visualization with PID Lane-Following (CARLA)
-2. 
+2. LiDAR PLY to JPEG Converter (Open3D)
 
 # LiDAR Top-Down Visualization with PID Lane-Following (CARLA)
 
