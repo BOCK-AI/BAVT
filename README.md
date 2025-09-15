@@ -4,6 +4,138 @@ There are two documents here:
 1. LiDAR Top-Down Visualization with PID Lane-Following (CARLA)
 2. LiDAR PLY to JPEG Converter (Open3D)
 
+
+
+# BAVT
+
+### **Usage of this document** ( This Documentation is primarily focused on Linux )
+1. Download this repo or file lidar3D_and_radar.py / Clone this repo (run these commands on terminal for linux/ cmd for windows)
+```
+          git clone -b RGB-Camera https://github.com/BOCK-AI/BAVT/
+          cd BAVT
+```
+
+2. Install dependencies, if you do not already have them:
+``` pip install carla opencv-python numpy ```
+
+3. Run CARLA server (in a separate terminal):
+
+``` ./CarlaUE4.sh   ``` on Linux
+run ```CarlaUE4.exe.``` on Windows
+
+4. Run the python file in terminal/ prompt:
+``` python3 rgb_cam.py```
+
+5. What you’ll see:
+   A Tesla Model 3 driving in CARLA’s world, following the road.
+   A live camera window showing RGB feed from the vehicle’s front camera.
+If some error occurs, it may be due to incorrect dependencies, or other things.
+
+6. To Exit: CTRL + C stops execution. OR - Press q in the OpenCV window to stop. All actors are destroyed automatically (vehicle + camera). 
+
+This script integrates **CARLA simulator** with **Open3D** and **OpenCV** to:
+
+- **Connects** to CARLA server at `localhost:2000`  
+- **Spawns** a Tesla Model 3 with a front RGB camera (FOV 150°)  
+- **Captures & processes** frames into OpenCV format for live display  
+- **Controls** the vehicle using a PID controller (constant throttle = 0.4)  
+- **Runs** simulation in synchronous mode (20 FPS)  
+- **Cleans up** actors and resets world settings on exit  
+
+⚠️ Notes / Tweaks:
+If CARLA lags, reduce resolution (e.g., IM_WIDTH = 320, IM_HEIGHT = 240).
+Change FOV (cam_bp.set_attribute("fov", "90")) for a more natural view.
+Add other sensors (LIDAR, RADAR) the same way.
+PID values (Kp, Ki, Kd) may need tuning depending on the map.
+
+---
+
+Here’s a **complete usage document** for your LiDAR + PID CARLA script, written in a standard “how to run and use” format for developers or researchers.
+
+---
+
+# Usage Documentation: CARLA LiDAR Top-Down Visualization with PID Lane-Following
+
+## 1. Overview
+
+This Python script:
+
+* Spawns a **Tesla Model 3** in the CARLA simulator.
+* Attaches a **64-channel LiDAR sensor** to the vehicle.
+* Converts LiDAR point clouds into **2D top-down images**.
+* Implements a **PID controller** to follow driving waypoints automatically.
+* Displays a **live LiDAR top-down visualization** using OpenCV.
+
+Press **`q`** in the OpenCV window to safely exit the simulation.
+
+---
+
+## 2. Prerequisites
+
+1. **CARLA Simulator** running (default port `2000`).
+
+   ```bash
+   ./CarlaUE4.sh -world-port=2000
+   ```
+
+   or Windows: `CarlaUE4.exe`.
+
+2. **Python 3.8+** environment.
+
+3. Python dependencies:
+
+   ```bash
+   pip install carla opencv-python numpy
+   ```
+
+---
+
+
+---
+
+## 4. Running the Script
+
+1. Start the CARLA server.
+2. Run the script:
+
+   ```bash
+   python lidar_pid_topdown.py
+   ```
+
+---
+
+## 5. How it Works
+
+1. **Initialization**:
+
+   * Connects to CARLA server.
+   * Spawns vehicle and LiDAR sensor.
+   * Sets world to synchronous mode.
+
+2. **LiDAR Processing**:
+
+   * Converts raw LiDAR data to `(x, y)` coordinates relative to the vehicle.
+   * Projects points onto a **top-down 2D grid**.
+   * Scales intensity to green color for display.
+   * Adds polar grid and axes.
+
+3. **PID Lane-Following**:
+
+   * Computes **cross-track error** from vehicle to next waypoint.
+   * Runs **PID controller** to generate steering corrections.
+   * Applies **throttle + steering** to the vehicle.
+
+4. **Visualization**:
+
+   * Updates OpenCV window `"LiDAR Top-Down View"` with latest LiDAR frame.
+   * Updates spectator camera behind vehicle.
+
+5. **Loop Execution**:
+
+   * `world.tick()` advances simulation each frame.
+   * Loop runs until user presses **`q`** or interrupts with Ctrl+C.
+---
+
 # LiDAR Top-Down Visualization with PID Lane-Following (CARLA)
 
 ## Overview
@@ -46,6 +178,27 @@ Press **`q`** to quit safely.
    ```bash
    python lidar_pid.py
    ```
+
+---
+
+## Configuration
+
+* **LiDAR Settings**:
+
+  * Channels: `64`
+  * Range: `50 m`
+  * Horizontal FOV: `360°`
+  * Vertical FOV: `-10° to 10°`
+  * Rotation frequency: `20 Hz`
+  * Points per second: `200,000`
+
+* **Top-Down Visualization**:
+
+  * Image size: `500 × 500 px`
+  * Scale: `5 pixels per meter`
+  * Center of image: vehicle location
+
+* 
 
 ---
 
@@ -129,9 +282,9 @@ When quitting:
 * A green radar-like visualization of obstacles around the car.
 * The Tesla drives forward and stays aligned with the road.
 
----
 
 ***
+
 
 # LiDAR PLY to JPEG Converter (Open3D)
 
