@@ -11,7 +11,7 @@ There are two documents here:
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
 1. Download this repo or file lidar3D_and_radar.py / Clone this repo (run these commands on terminal for linux/ cmd for windows)
 ```
-          git clone -b RGB-Camera https://github.com/BOCK-AI/BAVT/
+          git clone -b 2-D-LIDAR https://github.com/BOCK-AI/BAVT/
           cd BAVT
 ```
 
