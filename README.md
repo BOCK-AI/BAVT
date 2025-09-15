@@ -28,37 +28,13 @@ run ```CarlaUE4.exe.``` on Windows
 
 5. What you’ll see:
    A Tesla Model 3 driving in CARLA’s world, following the road.
+   A live OpenCV window open up and show 2d lidar feed.
    A live camera window showing RGB feed from the vehicle’s front camera.
 If some error occurs, it may be due to incorrect dependencies, or other things.
 
-6. To Exit: CTRL + C stops execution. OR - Press q in the OpenCV window to stop. All actors are destroyed automatically (vehicle + camera). 
+7. To Exit: CTRL + C stops execution. OR - Press q in the OpenCV window to stop. All actors are destroyed automatically (vehicle + camera). 
 
 This script integrates **CARLA simulator** with **Open3D** and **OpenCV** to:
-
-- **Connects** to CARLA server at `localhost:2000`  
-- **Spawns** a Tesla Model 3 with a front RGB camera (FOV 150°)  
-- **Captures & processes** frames into OpenCV format for live display  
-- **Controls** the vehicle using a PID controller (constant throttle = 0.4)  
-- **Runs** simulation in synchronous mode (20 FPS)  
-- **Cleans up** actors and resets world settings on exit  
-
-⚠️ Notes / Tweaks:
-If CARLA lags, reduce resolution (e.g., IM_WIDTH = 320, IM_HEIGHT = 240).
-Change FOV (cam_bp.set_attribute("fov", "90")) for a more natural view.
-Add other sensors (LIDAR, RADAR) the same way.
-PID values (Kp, Ki, Kd) may need tuning depending on the map.
-
----
-
-Here’s a **complete usage document** for your LiDAR + PID CARLA script, written in a standard “how to run and use” format for developers or researchers.
-
----
-
-# Usage Documentation: CARLA LiDAR Top-Down Visualization with PID Lane-Following
-
-## 1. Overview
-
-This Python script:
 
 * Spawns a **Tesla Model 3** in the CARLA simulator.
 * Attaches a **64-channel LiDAR sensor** to the vehicle.
@@ -68,72 +44,6 @@ This Python script:
 
 Press **`q`** in the OpenCV window to safely exit the simulation.
 
----
-
-## 2. Prerequisites
-
-1. **CARLA Simulator** running (default port `2000`).
-
-   ```bash
-   ./CarlaUE4.sh -world-port=2000
-   ```
-
-   or Windows: `CarlaUE4.exe`.
-
-2. **Python 3.8+** environment.
-
-3. Python dependencies:
-
-   ```bash
-   pip install carla opencv-python numpy
-   ```
-
----
-
-
----
-
-## 4. Running the Script
-
-1. Start the CARLA server.
-2. Run the script:
-
-   ```bash
-   python lidar_pid_topdown.py
-   ```
-
----
-
-## 5. How it Works
-
-1. **Initialization**:
-
-   * Connects to CARLA server.
-   * Spawns vehicle and LiDAR sensor.
-   * Sets world to synchronous mode.
-
-2. **LiDAR Processing**:
-
-   * Converts raw LiDAR data to `(x, y)` coordinates relative to the vehicle.
-   * Projects points onto a **top-down 2D grid**.
-   * Scales intensity to green color for display.
-   * Adds polar grid and axes.
-
-3. **PID Lane-Following**:
-
-   * Computes **cross-track error** from vehicle to next waypoint.
-   * Runs **PID controller** to generate steering corrections.
-   * Applies **throttle + steering** to the vehicle.
-
-4. **Visualization**:
-
-   * Updates OpenCV window `"LiDAR Top-Down View"` with latest LiDAR frame.
-   * Updates spectator camera behind vehicle.
-
-5. **Loop Execution**:
-
-   * `world.tick()` advances simulation each frame.
-   * Loop runs until user presses **`q`** or interrupts with Ctrl+C.
 ---
 
 # LiDAR Top-Down Visualization with PID Lane-Following (CARLA)
