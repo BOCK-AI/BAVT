@@ -14,8 +14,9 @@
 
 3. Run CARLA server (in a separate terminal):
 
-``` ./CarlaUE4.sh   ``` on Linux
-run ```CarlaUE4.exe.``` on Windows
+``` ./CarlaUE4.sh   ``` on Linux.
+
+Run ```CarlaUE4.exe.``` on Windows.
 
 4. Run the python file in terminal/ prompt:
 ``` python3 lidar3D_and_radar.py```
