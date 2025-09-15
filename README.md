@@ -1,6 +1,26 @@
 # BAVT
 
-# **Documentation for CARLA Sensor Visualization & Vehicle Control Script**
+# **Documentation for CARLA Sensor Visualization & Vehicle Control**
+
+### **Usage of this document** ( This Documentation is primarily focused on Linux )
+1. Download this repo or file lidar3D_and_radar.py / Clone this repo (run these commands on terminal)
+```
+          git clone https://github.com/BOCK-AI/BAVT/
+          cd BAVT
+```
+
+2. Install dependencies, if you do not already have them:
+``` pip install carla open3d opencv-python pillow numpy matplotlib ```
+
+3. Run CARLA server (in a separate terminal):
+
+``` ./CarlaUE4.sh   ``` on Linux
+run ```CarlaUE4.exe.``` on Windows
+
+4. Run the python file in terminal/ prompt:
+``` python3 lidar3D_and_radar.py```
+
+5. Output is expected to be seen. If some error occurs, it may be due to incorrect dependencies, or other things.
 
 This script integrates **CARLA simulator** with **Open3D** and **OpenCV** to:
 
