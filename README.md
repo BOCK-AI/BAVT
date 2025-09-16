@@ -9,6 +9,52 @@ There are two documents here:
 # BAVT
 
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
+
+##### Pre-Requisites:
+1. Must have a Carla 0.9.15 version simulator installed on your system.
+   Install Carla 0.9.15 at:
+```
+https://github.com/carla-simulator/carla/releases
+```
+(Just click on the suitable link under 0.9.15 on the same page:
+<img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/7ef4b032-7443-4d99-a09b-71e96575f50b" />
+)
+
+
+Usually, Carla would be installed in Downloads folder/ directory, as a ZIP file.
+Extract it in home directory / Desktop / wherever comfortable.
+
+2. To run Carla on ubuntu, follow these steps:
+             - Open new terminal window.
+             - Make sure you are in home directory. Terminal window should look like this.
+                       ```
+                       username@username-device_name:~$
+                       ```
+             - If you extracted carla_0.9.15 into home directory, rename the folder to "carla_0.9.15".
+             - Then execute the following commands in the same terminal/ prompt:
+                    ```
+                    cd carla_0.9.15
+                    ```
+             - To run carla on your system, execute this in the terminal:
+                    ```
+                    ./CarlaUE4.sh (linux)
+                    ./CarlaUE4.exe (windows)
+                    ```
+                    OR
+                    (For windows) Simply open File Explorer and go to same folder and click on CarlaUE4.exe.
+   Congratulations! You are now ready to get started with this world of Simulation.
+   
+   
+4. Setup Carla using these resources:
+   ```
+   https://carla.readthedocs.io/en/latest/start_quickstart/
+   https://www.youtube.com/watch?v=jIK9sanumuU
+   https://www.youtube.com/watch?v=AaJekfFR1KQ
+   https://carla.readthedocs.io/en/latest/tuto_first_steps/
+   https://carla.readthedocs.io/en/latest/tutorials/
+   ```
+
+
 1. Download this repo or file lidar3D_and_radar.py / Clone this repo (run these commands on terminal for linux/ cmd for windows)
 ```
           git clone -b 2-D-LIDAR https://github.com/BOCK-AI/BAVT/
