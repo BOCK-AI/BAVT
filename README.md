@@ -12,10 +12,18 @@ There are two documents here:
 
 ##### Pre-Requisites:
 We need **Python 3.8 to 3.10**. So please make sure you have that in your system. Download this version of python using: 
+
+Mainly for Windows users:
 ``` 
 https://www.python.org/downloads/release/python-3100/
 https://www.youtube.com/watch?v=PLgTZqNsMdQ
 ```
+Mainly for Linux users:
+```
+sudo apt install python3.11
+```
+
+
 1. Must have a Carla 0.9.15 version simulator installed on your system.
    Install Carla 0.9.15 at:
 ```
