@@ -18,7 +18,7 @@ https://www.python.org/downloads/release/python-3100/
 https://www.youtube.com/watch?v=PLgTZqNsMdQ
 ```
 ###### Mainly for Linux users: ( I am using Ubuntu 22.04 LTS ) 
-These instructions are to install python 3.10.12
+These instructions are to install python 3.10.12.
 Update system packages and install necessary dependencies:
 ```
     sudo apt update
