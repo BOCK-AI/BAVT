@@ -11,7 +11,11 @@ There are two documents here:
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
 
 ##### Pre-Requisites:
-We need **Python 3.8 to 3.10**. So please make sure you have that in your system. Download this version of python using:  
+We need **Python 3.8 to 3.10**. So please make sure you have that in your system. Download this version of python using: 
+``` 
+https://www.python.org/downloads/release/python-3100/
+https://www.youtube.com/watch?v=PLgTZqNsMdQ
+```
 1. Must have a Carla 0.9.15 version simulator installed on your system.
    Install Carla 0.9.15 at:
 ```
