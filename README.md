@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=PLgTZqNsMdQ
 ```
 Mainly for Linux users:
 ```
-sudo apt install python3.11
+sudo apt install python3.10.12
 ```
 
 
