@@ -5,10 +5,9 @@ There are two documents here:
 2. LiDAR PLY to JPEG Converter (Open3D)
 
 
-
 # BAVT
 
-### **Usage of this document** ( This Documentation is primarily focused on Linux )
+### **Usage of this document** ( This Documentation is primarily focused on Ubuntu 22.04 LTS )
 
 ##### Pre-Requisites:
 We need **Python 3.8 to 3.10**. So please make sure you have that in your system. Download this version of python using: 
@@ -18,10 +17,32 @@ Mainly for Windows users:
 https://www.python.org/downloads/release/python-3100/
 https://www.youtube.com/watch?v=PLgTZqNsMdQ
 ```
-Mainly for Linux users:
+###### Mainly for Linux users: ( I am using Ubuntu 22.04 LTS )
+Update system packages and install necessary dependencies:
 ```
-sudo apt install python3.10.12
+    sudo apt update
+    sudo apt install software-properties-common -y
 ```
+Add the deadsnakes PPA repository.
+
+
+```
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt update
+```
+Press ENTER when prompted to confirm adding the repository. Install Python 3.10.
+
+
+```
+    sudo apt install python3.10 python3.10-venv python3.10-dev -y
+```
+This command installs Python 3.10, the virtual environment module (venv), and development headers (dev). Verify the installation.
+
+```
+    python3.10 --version
+```
+This command should output the installed Python 3.10 version, confirming the successful installation.
+
 
 
 1. Must have a Carla 0.9.15 version simulator installed on your system.
