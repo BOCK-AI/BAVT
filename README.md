@@ -16,6 +16,7 @@ We need **Python 3.8 to 3.10**. So please make sure you have that in your system
    Install Carla 0.9.15 at:
 ```
 https://github.com/carla-simulator/carla/releases
+https://github.com/carla-simulator/carla/releases/tag/0.9.15
 ```
 (Just click on the suitable link under 0.9.15 on the same page:
 <img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/7ef4b032-7443-4d99-a09b-71e96575f50b" />
