@@ -1,6 +1,90 @@
 # BAVT
 
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
+
+### **Usage of this document** ( This Documentation is primarily focused on Linux )
+
+##### Pre-Requisites:
+1. Must have a Carla 0.9.15 version simulator installed on your system.
+   Install Carla 0.9.15 at:
+```
+https://github.com/carla-simulator/carla/releases
+```
+(Just click on the suitable link under 0.9.15 on the same page:
+<img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/7ef4b032-7443-4d99-a09b-71e96575f50b" />
+)
+
+
+Usually, Carla would be installed in Downloads folder/ directory, as a ZIP file.
+Extract it in home directory / Desktop / wherever comfortable.
+
+2. To run Carla on ubuntu, follow these steps:
+             - Open new terminal window.
+             - Make sure you are in home directory. Terminal window should look like this.
+                       ```
+                       username@username-device_name:~$
+                       ```
+             - If you extracted carla_0.9.15 into home directory, rename the folder to "carla_0.9.15".
+             - Then execute the following commands in the same terminal/ prompt:
+                    ```
+                    cd carla_0.9.15
+                    ```
+             - To run carla on your system, execute this in the terminal:
+                    ```
+                    ./CarlaUE4.sh (linux)
+                    ./CarlaUE4.exe (windows)
+                    ```
+                    OR
+                    (For windows) Simply open File Explorer and go to same folder and click on CarlaUE4.exe.
+   Congratulations! You are now ready to get started with this world of Simulation.
+   
+   
+4. Setup Carla using these resources:
+   ```
+   https://carla.readthedocs.io/en/latest/start_quickstart/
+   https://www.youtube.com/watch?v=jIK9sanumuU
+   https://www.youtube.com/watch?v=AaJekfFR1KQ
+   https://carla.readthedocs.io/en/latest/tuto_first_steps/
+   https://carla.readthedocs.io/en/latest/tutorials/
+   ```
+-
+
+1. Download this repo or file lidar3D_and_radar.py / Clone this repo (run these commands on terminal for linux/ cmd for windows)
+```
+          git clone -b 2-D-LIDAR https://github.com/BOCK-AI/BAVT/
+          cd BAVT
+```
+
+2. Install dependencies, if you do not already have them:
+``` pip install carla opencv-python numpy ```
+
+3. Run CARLA server (in a separate terminal):
+
+``` ./CarlaUE4.sh   ``` on Linux
+run ```CarlaUE4.exe.``` on Windows
+
+4. Run the python file in terminal/ prompt:
+``` python3 rgb_cam.py```
+
+5. What you’ll see:
+   A Tesla Model 3 driving in CARLA’s world, following the road.
+   A live OpenCV window open up and show 2d lidar feed.
+   A live camera window showing RGB feed from the vehicle’s front camera.
+If some error occurs, it may be due to incorrect dependencies, or other things.
+
+7. To Exit: CTRL + C stops execution. OR - Press q in the OpenCV window to stop. All actors are destroyed automatically (vehicle + camera). 
+
+This script integrates **CARLA simulator** with **Open3D** and **OpenCV** to:
+
+* Spawns a **Tesla Model 3** in the CARLA simulator.
+* Attaches a **64-channel LiDAR sensor** to the vehicle.
+* Converts LiDAR point clouds into **2D top-down images**.
+* Implements a **PID controller** to follow driving waypoints automatically.
+* Displays a **live LiDAR top-down visualization** using OpenCV.
+
+Press **`q`** in the OpenCV window to safely exit the simulation.
+
+
 1. Download this repo or file lidar3D_and_radar.py / Clone this repo (run these commands on terminal for linux/ cmd for windows)
 ```
           git clone -b RGB-Camera https://github.com/BOCK-AI/BAVT/
