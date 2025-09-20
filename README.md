@@ -217,3 +217,32 @@ or
 * `numpy`, `matplotlib`, `math`, `time`.
 
 ---
+
+# The ply_print.py file:
+
+What does each axis mean? 
+x → forward/backward (front of the vehicle is usually +x in CARLA’s local frame)
+y → left/right (right is usually +y, left is −y in CARLA’s left-handed system)
+z → up/down (up is +z, down is −z)
+
+So, each line:
+```
+-1.234  2.345  0.567
+```
+
+means:
+The point is 1.234m behind,
+2.345m to the right,
+0.567m above the sensor origin.
+          This applies to both RADAR and LiDAR.
+
+Note that:
+LiDAR RGB = reflection intensity → plasma colors
+Radar RGB = relative velocity → winter colors
+
+Under this, the diagram describes this:
+Left bar (Plasma colormap): how LiDAR reflection intensity is mapped to RGB values.
+Right bar (Winter colormap): how Radar velocity magnitude is mapped to RGB values.
+
+<img width="1979" height="357" alt="image" src="https://github.com/user-attachments/assets/1c6044eb-b5cd-4489-ae17-f93231ff387e" />
+
