@@ -2,8 +2,6 @@
 
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
 
-### **Usage of this document** ( This Documentation is primarily focused on Linux )
-
 ##### Pre-Requisites:
 1. Must have a Carla 0.9.15 version simulator installed on your system.
    Install Carla 0.9.15 at:
