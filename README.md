@@ -29,9 +29,9 @@ Extract it in home directory / Desktop / wherever comfortable.
                     ```<br>
              - To run carla on your system, execute this in the terminal:<br>
                     ```
-                    ./CarlaUE4.sh (linux)<br>
-                    ./CarlaUE4.exe (windows)<br>
-                    ```
+                    ./CarlaUE4.sh (linux)
+                    ./CarlaUE4.exe (windows)
+                    ```<br>
                     OR<br>
                     (For windows) Simply open File Explorer and go to same folder and click on CarlaUE4.exe.<br>
    Congratulations! You are now ready to get started with this world of Simulation.
