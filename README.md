@@ -22,23 +22,8 @@ If you don't have python on your system, or have a different version, then pleas
       * **Linux:** It's best to use your distribution's package manager (like `apt`, `yum`, or `dnf`). For example, on Ubuntu, you might use `sudo apt install python3.10`.
 
 4.  **Download and run the installer**, following the on-screen instructions. Be sure to check the box that says "**Add Python 3.10 to PATH**" during installation on Windows.
+
 ---
-
-
-1. Must have a Carla 0.9.15 version simulator installed on your system.
-   Install Carla 0.9.15 at:
-```
-https://github.com/carla-simulator/carla/releases
-https://github.com/carla-simulator/carla/releases/tag/0.9.15
-```
-(Just click on the suitable link under 0.9.15 on the same page:
-<img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/7ef4b032-7443-4d99-a09b-71e96575f50b" />
-)
-
-
-Usually, Carla would be installed in Downloads folder/ directory, as a ZIP file.
-Extract it in home directory / Desktop / wherever comfortable.
-
 
 1. Must have a Carla 0.9.15 version simulator installed on your system.
    Install Carla 0.9.15 at:
