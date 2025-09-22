@@ -16,24 +16,24 @@ https://github.com/carla-simulator/carla/releases
 Usually, Carla would be installed in Downloads folder/ directory, as a ZIP file.
 Extract it in home directory / Desktop / wherever comfortable.
 
-2. To run Carla on ubuntu, follow these steps:
-             - Open new terminal window.
-             - Make sure you are in home directory. Terminal window should look like this.
+2. To run Carla on ubuntu, follow these steps:<br>
+             - Open new terminal window.<br>
+             - Make sure you are in home directory. Terminal window should look like this.<br>
                        ```
                        username@username-device_name:~$
-                       ```
-             - If you extracted carla_0.9.15 into home directory, rename the folder to "carla_0.9.15".
-             - Then execute the following commands in the same terminal/ prompt:
+                       ```<br>
+             - If you extracted carla_0.9.15 into home directory, rename the folder to "carla_0.9.15".<br>
+             - Then execute the following commands in the same terminal/ prompt:<br>
                     ```
                     cd carla_0.9.15
+                    ```<br>
+             - To run carla on your system, execute this in the terminal:<br>
                     ```
-             - To run carla on your system, execute this in the terminal:
+                    ./CarlaUE4.sh (linux)<br>
+                    ./CarlaUE4.exe (windows)<br>
                     ```
-                    ./CarlaUE4.sh (linux)
-                    ./CarlaUE4.exe (windows)
-                    ```
-                    OR
-                    (For windows) Simply open File Explorer and go to same folder and click on CarlaUE4.exe.
+                    OR<br>
+                    (For windows) Simply open File Explorer and go to same folder and click on CarlaUE4.exe.<br>
    Congratulations! You are now ready to get started with this world of Simulation.
    
    
