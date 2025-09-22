@@ -58,7 +58,7 @@ https://github.com/carla-simulator/carla/releases/tag/0.9.15
 
 
 Usually, Carla would be installed in Downloads folder/ directory, as a ZIP file.
-Extract it in home directory / Desktop / wherever comfortable.
+Extract it in home directory / C: (C Drive) / wherever comfortable.
 
 2. To run Carla on ubuntu, follow these steps:<br>
              - Open new terminal window.<br>
@@ -94,7 +94,9 @@ Extract it in home directory / Desktop / wherever comfortable.
    https://carla.readthedocs.io/en/latest/tuto_first_steps/
    https://carla.readthedocs.io/en/latest/tutorials/
    ```
+---
 
+#### Instructions to use this file:
 
 1. Download this repo or file lidar3D_and_radar.py / Clone this repo (run these commands on terminal for linux/ cmd for windows)
 ```
