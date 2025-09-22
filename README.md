@@ -3,14 +3,12 @@
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
 
 ##### Pre-Requisites:
-We need **Python 3.8 to 3.10**. So please make sure you have that in your system. Download this version of python using: 
+We need **Python 3.8 to 3.10**. So please make sure you have that in your system. If you have the required python versions already, then the next sub-section can be skipped.
 
-Mainly for Windows users:
-``` 
-https://www.python.org/downloads/release/python-3100/
-https://www.youtube.com/watch?v=PLgTZqNsMdQ
-```
-##### Python Download
+If you don't have python on your system, or have a different version, then please read the next Sub-section.
+
+
+##### Python Download (Recommend using python 3.10.12)
 ###### Mainly for Linux users: ( I am using Ubuntu 22.04 LTS ) | Python.org 
 
 1.  **Go to the official Python downloads page** for version 3.10.12: [https://www.python.org/downloads/release/python-31012/](https://www.python.org/downloads/release/python-31012/)
