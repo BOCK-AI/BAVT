@@ -77,6 +77,10 @@ Congratulations\! You are now ready to get started with the world of CARLA.
 ### Instructions to use `rgb_cam.py`:
 
 Firstly, run this command, which makes sure you clone the repo into the right folder.
+```
+cd carla_0.9.15/PythonAPI/examples
+```
+Now, we are ready to clone the repository.
 
 1.  **Clone the Repository**
     Clone the `RGB-Camera` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:
@@ -94,7 +98,7 @@ Firstly, run this command, which makes sure you clone the repo into the right fo
     ```
 
 3.  **Run CARLA Server**
-    In a **separate terminal**, start the CARLA simulator (as described in the "Running the CARLA Simulator" section above).
+    In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).
 
       * **Linux:**
         ```bash
