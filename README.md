@@ -3,6 +3,47 @@
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
 
 ##### Pre-Requisites:
+
+##### Pre-Requisites:
+We need **Python 3.8 to 3.10**. So please make sure you have that in your system. Download this version of python using: 
+
+Mainly for Windows users:
+``` 
+https://www.python.org/downloads/release/python-3100/
+https://www.youtube.com/watch?v=PLgTZqNsMdQ
+```
+##### Python Download
+###### Mainly for Linux users: ( I am using Ubuntu 22.04 LTS ) | Python.org 
+
+1.  **Go to the official Python downloads page** for version 3.10.12: [https://www.python.org/downloads/release/python-31012/](https://www.python.org/downloads/release/python-31012/)
+
+2.  **Scroll down** to the **Files** section at the bottom of the page.
+
+3.  **Choose the correct installer** for your operating system.
+
+      * **Windows:** Look for "**Windows installer (64-bit)**".
+      * **macOS:** Look for "**macOS 64-bit universal2 installer**".
+      * **Linux:** It's best to use your distribution's package manager (like `apt`, `yum`, or `dnf`). For example, on Ubuntu, you might use `sudo apt install python3.10`.
+
+4.  **Download and run the installer**, following the on-screen instructions. Be sure to check the box that says "**Add Python 3.10 to PATH**" during installation on Windows.
+---
+
+
+1. Must have a Carla 0.9.15 version simulator installed on your system.
+   Install Carla 0.9.15 at:
+```
+https://github.com/carla-simulator/carla/releases
+https://github.com/carla-simulator/carla/releases/tag/0.9.15
+```
+(Just click on the suitable link under 0.9.15 on the same page:
+<img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/7ef4b032-7443-4d99-a09b-71e96575f50b" />
+)
+
+
+Usually, Carla would be installed in Downloads folder/ directory, as a ZIP file.
+Extract it in home directory / Desktop / wherever comfortable.
+
+
 1. Must have a Carla 0.9.15 version simulator installed on your system.
    Install Carla 0.9.15 at:
 ```
@@ -14,7 +55,7 @@ https://github.com/carla-simulator/carla/releases
 
 
 Usually, Carla would be installed in Downloads folder/ directory, as a ZIP file.
-Extract it in home directory / Desktop / wherever comfortable.
+Extract it in home directory / C: / wherever comfortable.
 
 2. To run Carla on ubuntu, follow these steps:<br>
              - Open new terminal window.<br>
