@@ -135,6 +135,8 @@ Now, we are ready to clone the repository.
  - ctrl + shift + v - paste
  - ctrl + shift + c - copy
  - tab - Autocomplete, if enabled.
+ - ctrl + shift + t - for a new tab in the current terminal window.
+ - ctrl + shift + n - for a new terminal window.
 
 -----
 
