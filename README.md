@@ -25,7 +25,8 @@ Extract it in home directory / Desktop / wherever comfortable.
              - If you extracted carla_0.9.15 into home directory, rename the folder to "carla_0.9.15".<br>
              - Then execute the following commands in the same terminal/ prompt:<br>
                     ```
-                    cd carla_0.9.15
+                    cd carla_0.9.15 (linux)
+                    cd ../.. and cd carla_0.9.15 (windows)
                     ```<br>
              - To run carla on your system, execute this in the terminal:<br>
                     ```
