@@ -22,7 +22,8 @@ Extract it in home directory / Desktop / wherever comfortable.
                        ```
                        username@username-device_name:~$
                        ```<br>
-             - If you extracted carla_0.9.15 into home directory, rename the folder to "carla_0.9.15".<br>
+             - Extract the carla .zip or .tar into Home directory or (C:) C drive.<br>
+             - After extracting, rename the folder to ```carla_0.9.15```.<br>
              - Then execute the following commands in the same terminal/ prompt:<br>
                     ```
                     cd carla_0.9.15 (linux)
