@@ -4,8 +4,7 @@ There are two documents here:
 1. LiDAR Top-Down Visualization with PID Lane-Following (CARLA)
 2. LiDAR PLY to JPEG Converter (Open3D)
 
-
-# BAVT
+---
 
 ### **Usage of this document** ( This Documentation is primarily focused on Ubuntu 22.04 LTS )
 
