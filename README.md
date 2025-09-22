@@ -71,7 +71,10 @@ Extract it in home directory / C: / wherever comfortable.
    https://carla.readthedocs.io/en/latest/tuto_first_steps/
    https://carla.readthedocs.io/en/latest/tutorials/
    ```
--
+
+---
+
+#### Instructions to use this file:
 
 1. Download this repo or file lidar3D_and_radar.py / Clone this repo (run these commands on terminal for linux/ cmd for windows)
 ```
