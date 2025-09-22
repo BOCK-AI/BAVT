@@ -38,7 +38,7 @@ Extract it in home directory / Desktop / wherever comfortable.
                     ```<br>
                     OR<br>
                     (For windows) Simply open File Explorer and go to same folder and click on CarlaUE4.exe.<br>
-   Congratulations! You are now ready to get started with this world of Simulation.
+   Congratulations! You are now ready to get started with the world of Carla.
    
    
 4. Setup Carla using these resources:
