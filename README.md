@@ -131,6 +131,13 @@ Now, we are ready to clone the repository.
 
 -----
 
+**Some Handy Terminal Shortcuts:**
+ - ctrl + shift + v - paste
+ - ctrl + shift + c - copy
+ - tab - Autocomplete, if enabled.
+
+-----
+
 ## Technical Report: CARLA RGB Camera Streaming with PID-Based Lane Following
 
 ### 1\. Overview
