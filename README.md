@@ -3,8 +3,6 @@
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
 
 ##### Pre-Requisites:
-
-##### Pre-Requisites:
 We need **Python 3.8 to 3.10**. So please make sure you have that in your system. Download this version of python using: 
 
 Mainly for Windows users:
