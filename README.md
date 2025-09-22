@@ -261,12 +261,8 @@ CARLA Simulator
 
   * The cross-track error `e` is computed as:
 
-    $$
-    $$$$e = (v\_{\\text{forward}} \\times target\_{\\text{vector}})\_z
-
-    $$
-    $$$$
-    $$
+    e = (v\_{\\text{forward}} \\times target\_{\\text{vector}})\_z
+    
   * The PID controller then outputs a steering command based on this error `e`.
 
 #### 6.2 PID Controller
