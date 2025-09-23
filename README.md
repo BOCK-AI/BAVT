@@ -104,31 +104,31 @@ Now, we are ready to clone the repository.
     ```
 
 3.  **Run CARLA Server**
-    In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).
+    In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).  
 
-      * **Linux:**
-        ```bash
+      * **Linux:**  
+        ```
         ./CarlaUE4.sh
+        ```  
+      * **Windows:**  
         ```
-      * **Windows:**
-        ```cmd
         CarlaUE4.exe
-        ```
+        ```  
 
-4.  **Run the Python Script**
+4.  **Run the Python Script**  
     Once the CARLA server is running, execute the `rgb_cam.py` file in your first terminal:
 
     ```bash
     python3 rgb_cam.py
     ```
 
-5.  **What You’ll See**
+5.  **What You’ll See**  
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
       * If any error occurs, it might be due to incorrect dependencies or other configuration issues.
 
-6.  **How to Exit**
+6.  **How to Exit**  
     To stop the script and clean up the simulation, you can either:
 
       * Press **`CTRL + C`** in the terminal where `rgb_cam.py` is running.
