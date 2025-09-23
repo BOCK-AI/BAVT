@@ -55,14 +55,14 @@ If you don't have python on your system, or have a different version, then pleas
                   cd C:\carla_0.9.15
                   ``` <br>
                * **Execute the CARLA server:**
-                    * **Linux:**
-                         ```bash
-                         ./CarlaUE4.sh
-                         ```
-               * **Windows:**
-               ```cmd 
-               CarlaUE4.exe        
-               ```
+                 * **Linux:**  
+                      ```
+                      ./CarlaUE4.sh
+                      ```
+                 * **Windows:**
+                      ```
+                      CarlaUE4.exe        
+                      ```  
       * Alternatively, on Windows, you can simply navigate to the `carla_0.9.15` folder in File Explorer and double-click `CarlaUE4.exe`.
       
 Congratulations\! You are now ready to get started with the world of CARLA.
