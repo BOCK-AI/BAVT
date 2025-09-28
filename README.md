@@ -140,6 +140,7 @@ Now, we are ready to clone the repository.
         ```cmd
         CarlaUE4.exe
         ```
+        (If this doesn't work, then go to your file explorer, open C:, open the carla_0.9.15 folder. Double click on the CarlaUE4.exe. Carla is now going to start running.)
 
 6.  **Run the Python Script**
     Once the CARLA server is running, execute the `lidar3d_and_radar.py` file in your *first* terminal: 
