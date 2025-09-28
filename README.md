@@ -120,6 +120,7 @@ Now, we are ready to clone the repository.
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
+      * In the simulator, you will be positioned to spectate *behind* the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
       * If any error occurs, it might be due to incorrect dependencies or other configuration issues.
 
 6.  **How to Exit**
@@ -127,7 +128,7 @@ Now, we are ready to clone the repository.
 
       * Press **`CTRL + C`** in the terminal where `rgb_cam.py` is running.
       * Press the **`q`** key while the OpenCV window is active.
-        All actors (vehicle + camera) are destroyed automatically.
+        All actors (vehicle + camera) and windows are destroyed automatically.
 
 -----
 
