@@ -126,7 +126,12 @@ Now, we are ready to clone the repository.
 
 4.  **Run CARLA Server**
     In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).
-
+    Execute these lines first:
+    ```
+    cd
+    cd carla_0.9.15
+    ```
+    Then continue with these:   
       * **Linux:**
         ```bash
         ./CarlaUE4.sh
@@ -136,14 +141,14 @@ Now, we are ready to clone the repository.
         CarlaUE4.exe
         ```
 
-5.  **Run the Python Script**
+6.  **Run the Python Script**
     Once the CARLA server is running, execute the `lidar3d_and_radar.py` file in your *first* terminal: 
 
     ```bash
     python3 lidar3d_and_radar.py
     ```
 
-6.  **What You’ll See**
+7.  **What You’ll See**
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
