@@ -93,8 +93,8 @@ Now, we are ready to clone the repository.
     Install the required Python libraries.
 
     ```bash
-    pip install carla random cv2 queue numpy time
-    ```
+    pip install carla threading queue numpy time open3d
+    ``` 
 
 3.  **Run CARLA Server**
     In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).
@@ -119,8 +119,9 @@ Now, we are ready to clone the repository.
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
-      * If any error occurs, it might be due to incorrect dependencies or other configuration issues.
-
+      * A live Open3D Window ('') which is an interactive 3D window where you can use your mouse to rotate, pan, and zoom the view. It displays two overlapping point clouds updated in real-time. (Lidar - yellow gradient points, Radar - Blue points)
+      * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
+        
 6.  **How to Exit**
     To stop the script and clean up the simulation, you can either:
 
@@ -137,23 +138,90 @@ Now, we are ready to clone the repository.
  - ctrl + shift + n - for a new terminal window.
 
 -----
+      
+## Technical Report: CARLA 3D-LIDAR and RADAR Streaming with PID-Based Lane Following
+The lidar3d_and_radar.py script demonstrates a comprehensive CARLA simulation environment. It spawns a vehicle and equips it with LiDAR, RADAR, and an RGB camera. The data from these sensors is processed and visualized in real-time using Open3D for 3D point clouds and OpenCV for the camera feed.
 
-***Instructions to use lidar3d_and_radar.py:**
+Furthermore, the script implements a simple autonomous driving agent using a **PID controller** to make the vehicle follow the lanes of the road.  
+
+### \#\# Dependencies
+
+Before running, ensure you have the required libraries installed and a CARLA server is active.
+
+  * **CARLA Server:** The script requires an active CARLA simulator instance to connect to.
+  * **Python Libraries:**
+      * `carla`: The official CARLA Python client.
+      * `numpy`: For numerical operations.
+      * `opencv-python` (cv2): For displaying the camera feed.
+      * `open3d`: For 3D point cloud visualization.
+      * `matplotlib`: For colormap generation.
 
 
+### \#\# Core Components
+
+#### **Configuration**
+
+Global constants at the beginning of the file define the image dimensions (`IM_WIDTH`, `IM_HEIGHT`) and pre-generate colormaps from `matplotlib` for coloring the point clouds.
+
+  * `VIRIDIS` (Plasma): Used to color LiDAR points based on **intensity**.
+  * `COOL` (Winter): Used to color RADAR points based on **velocity**.
+
+#### **PID Controller**
+
+The `PIDController` class implements a Proportional-Integral-Derivative controller. This is a common control loop mechanism used to minimize the error between a measured value and a desired setpoint.
+
+  * **Proportional ($K_p$)**: Reacts to the current error. A larger error results in a stronger correction.
+  * **Integral ($K_i$)**: Accumulates past errors. This helps eliminate steady-state errors.
+  * **Derivative ($K_d$)**: Reacts to the rate of change of the error. This helps dampen oscillations and prevent overshooting.
+
+In this script, it's used to calculate the necessary **steering angle** to minimize the car's distance from the center of the lane (the cross-track error).
+
+#### **Main Loop (`main` function)**
+
+The `main()` function orchestrates the entire simulation:
+
+1.  **Initialization**: Connects to the CARLA client and sets the world to **synchronous mode**. This is critical as it ensures the simulation only advances when `world.tick()` is called, allowing all sensors to provide data for the same moment in time.
+2.  **Actor Spawning**: Spawns a `vehicle.tesla.model3` and attaches three sensors to it: a LiDAR, a RADAR, and an RGB Camera. Each sensor's attributes (range, FoV, points per second, etc.) are configured here.
+3.  **Callbacks**: For each sensor, a `listen()` method is called with a lambda function. This function is executed asynchronously whenever the sensor produces new data.
+      * `lidar.listen(lambda data: lidar_callback(data, point_list))`
+      * `radar.listen(lambda data: radar_callback(data, radar_list))`
+      * `camera.listen(lambda image: camera_callback(image, camera_data))`
+4.  **Visualization Setup**: Creates an OpenCV window for the camera and an Open3D visualizer for the point clouds.
+5.  **Execution Loop**: The `while True:` loop is the heart of the script. In each iteration, it:
+      * Calls `world.tick()` to advance the simulation by one step (`0.05` seconds).
+      * Updates the Open3D geometries with the latest sensor data.
+      * Calculates the vehicle's **cross-track error** by comparing its forward vector to the vector pointing towards a future waypoint.
+      * Uses the `PIDController` to compute the required steering correction based on this error.
+      * Applies throttle and the computed steer value to the vehicle.
+      * Displays the new camera image.
+6.  **Cleanup**: The `finally` block ensures that when the script is terminated, all actors are destroyed and the world is reverted to asynchronous mode, preventing orphaned actors in the simulator.
 
 
+### \#\# Function Reference
 
+`add_open3d_axis(vis)`
 
+  * Adds a 3D coordinate axis (X, Y, Z) to the Open3D visualizer for better orientation.
 
+`lidar_callback(point_cloud, point_list)`
 
+  * **Triggered by**: LiDAR sensor data.
+  * **Action**: Processes raw LiDAR data (`point_cloud.raw_data`). It reshapes the data into `(x, y, z, intensity)` points. Colors are calculated based on intensity and mapped using the 'plasma' colormap. The provided Open3D `point_list` object is updated with the new points and colors.
 
+`radar_callback(meas, point_list)`
 
+  * **Triggered by**: RADAR sensor data.
+  * **Action**: Processes a list of radar detections (`meas`). It converts each detection from spherical coordinates (azimuth, altitude, depth) to Cartesian coordinates `(x, y, z)`. Colors are calculated based on the absolute velocity and mapped using the 'winter' colormap. The provided Open3D `radar_list` object is updated.
 
+`camera_callback(image, data_dict)`
 
+  * **Triggered by**: RGB Camera data.
+  * **Action**: Reshapes the raw image data into a NumPy array `(height, width, 4)` and stores it in the `camera_data` dictionary.
 
+`PIDController.run_step(error, dt)`
 
-
+  * **Parameters**: The current `error` (cross-track error) and `dt` (delta time, `0.05s`).
+  * **Returns**: A control value (steering correction) calculated using the PID formula.
 
 
 
