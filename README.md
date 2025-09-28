@@ -48,8 +48,8 @@ If you don't have python on your system, or have a different version, then pleas
 
 #### Running the CARLA Simulator
 * **Open a new terminal window.** <br>
-* **Navigate to the CARLA directory.** Assuming you extracted it to your Home directory or C: (C drive).  <br>
-       * **Linux:**    
+* **Navigate to the CARLA directory.** Assuming you extracted it to your Home directory or C: (C drive).  
+       * **Linux:**      
           ```    
             cd ~/carla_0.9.15
           ```     
@@ -98,7 +98,7 @@ For Windows, Start from C: Folder in cmd.
   ```
   cd carla_0.9.15/PythonAPI/examples
   ```
-  
+  (Clone only the first time. Do not need to clone repeatedly.)
 Now, we are ready to clone the repository.
 
 1.  **Clone the Repository**
