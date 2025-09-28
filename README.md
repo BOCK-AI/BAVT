@@ -1,4 +1,4 @@
-# BAVT - `3dlidar.py` Documentation
+# BAVT - `lidar3d_and_radar.py` Documentation
 
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
 
@@ -73,6 +73,72 @@ Congratulations\! You are now ready to get started with the world of CARLA.
 
 -----
 
+### Instructions to use `lidar3d_and_radar.py`:
+
+Firstly, run this command, which makes sure you clone the repo into the right folder.
+```
+cd carla_0.9.15/PythonAPI/examples
+```
+Now, we are ready to clone the repository.
+
+1.  **Clone the Repository**
+    Clone the `3-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:
+
+    ```bash
+    git clone -b 3-D-LIDAR https://github.com/BOCK-AI/BAVT/
+    cd BAVT
+    ```
+
+2.  **Install Dependencies**
+    Install the required Python libraries.
+
+    ```bash
+    pip install carla random cv2 queue numpy time
+    ```
+
+3.  **Run CARLA Server**
+    In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).
+
+      * **Linux:**
+        ```bash
+        ./CarlaUE4.sh
+        ```
+      * **Windows:**
+        ```cmd
+        CarlaUE4.exe
+        ```
+
+4.  **Run the Python Script**
+    Once the CARLA server is running, execute the `lidar3d_and_radar.py` file in your first terminal:
+
+    ```bash
+    python3 lidar3d_and_radar.py
+    ```
+
+5.  **What You’ll See**
+
+      * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
+      * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
+      * If any error occurs, it might be due to incorrect dependencies or other configuration issues.
+
+6.  **How to Exit**
+    To stop the script and clean up the simulation, you can either:
+
+      * Press **`CTRL + C`** in the terminal where `lidar3d_and_radar.py` is running.
+      * Press the **`q`** key while the OpenCV window is active.
+        All actors (vehicle + camera) are destroyed automatically.
+
+-----
+**Some Handy Terminal Shortcuts:**
+ - ctrl + shift + v - paste
+ - ctrl + shift + c - copy
+ - tab - Autocomplete, if enabled.
+ - ctrl + shift + t - for a new tab in the current terminal window.
+ - ctrl + shift + n - for a new terminal window.
+
+-----
+
+***Instructions to use lidar3d_and_radar.py:**
 
 
 
