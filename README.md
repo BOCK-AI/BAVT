@@ -77,7 +77,7 @@ Congratulations\! You are now ready to get started with the world of CARLA.
 
 Firstly, run this command, which makes sure you clone the repo into the right folder. Start from HOME directory (```~/```) in your linux terminal. For Windows, Start from C: Folder in cmd.
 
-# *first* terminal
+* The *first* terminal
 ```
 cd carla_0.9.15/PythonAPI/examples   
 ```
