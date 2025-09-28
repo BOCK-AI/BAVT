@@ -84,13 +84,15 @@ cd carla_0.9.15/PythonAPI/examples
 Now, we are ready to clone the repository.
 
 1.  **Clone the Repository**
-    FOR WINDOWS:
+
+    *FOR WINDOWS:*   
     It is easier for Linux users to use Git than Windows users.
-    Windows User can simply download zip, extract its contents into the right folder (C:/carla_0.9.15/PythonAPI/examples).
+    Windows User can simply download zip, extract its contents into the right folder:
+    ```(C:/carla_0.9.15/PythonAPI/examples)```
     
-    FOR LINUX:
-    Clone the `3-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:
-    ```bash
+    *FOR LINUX:*   
+    Clone the `3-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
+    ```
     git clone -b 3-D-LIDAR https://github.com/BOCK-AI/BAVT/
     cd BAVT
     ```
