@@ -157,7 +157,7 @@ The lidar3d_and_radar.py script demonstrates a comprehensive CARLA simulation en
 
 The script implements a simple autonomous driving agent using a **PID controller** to make the vehicle follow the lanes of the road.  
 
-### \#\# Dependencies
+### Dependencies
 
 Before running, ensure you have the required libraries installed and a CARLA server is active.
 
@@ -170,7 +170,7 @@ Before running, ensure you have the required libraries installed and a CARLA ser
       * `matplotlib`: For colormap generation.
 
 
-### \#\# Core Components
+### Core Components
 
 #### **Configuration**
 
@@ -210,7 +210,7 @@ The `main()` function orchestrates the entire simulation:
 6.  **Cleanup**: The `finally` block ensures that when the script is terminated, all actors are destroyed and the world is reverted to asynchronous mode, preventing orphaned actors in the simulator.
 
 
-### \#\# Function Reference
+### Function Reference
 
 `add_open3d_axis(vis)`
 
