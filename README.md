@@ -101,9 +101,21 @@ Now, we are ready to clone the repository.
     *FOR LINUX:*   
     Clone the `3-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
     ```
-    git clone -b 3-D-LIDAR https://github.com/BOCK-AI/BAVT/
+    git clone https://github.com/BOCK-AI/BAVT/
     cd BAVT
     ```
+    Now we must navigate to the right branch on terminal: this command is used for seeing All the existing Branches in the GutHub repo.
+    ```
+    git branch -a
+    ```
+    Now we switch to 3-D-LIDAR branch : (Switch branches using ```git checkout```)
+    ```
+    git checkout origin/3-D-LIDAR
+    ```
+    You can see all branches on your system using:
+    ```
+    git branch
+    ```   
 
 3.  **Install Dependencies**
     Install the required Python libraries.
