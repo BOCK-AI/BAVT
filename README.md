@@ -17,17 +17,27 @@ If you don't have python on your system, or have a different version, then pleas
 #### Python Installation (Recommend using python 3.10.11)
 ##### Mainly for Linux users: ( I am using Ubuntu 22.04 LTS ) | Python.org 
 
-1.  **Go to the official Python downloads page** for version 3.10.11: [https://www.python.org/downloads/release/python-31011/](https://www.python.org/downloads/release/python-31011/)
+* *FOR LINUX:*      
+* **Linux:** It's best to use your distribution's package manager (like `apt`, `yum`, or `dnf`). For example, on Ubuntu, you might use   
+  ```   
+  sudo apt install python3.10
+  ```    
 
-2.  **Scroll down** to the **Files** section at the bottom of the page.
+* *FOR WINDOWS:*
+1. Please follow this tutorial for CRYSTAL CLEAR instructions on how to download python.     
+   (Change python 3.8 to 3.10 wherever needed.).    
+   `https://tutedude.com/blogs/product/how-to-install-python-on-windows-10-a-guide-for-developers-new-to-python/`      
+2. **Go to the official Python downloads page** for version 3.10.11: [https://www.python.org/downloads/release/python-31011/](https://www.python.org/downloads/release/python-31011/)
 
-3.  **Choose the correct installer** for your operating system.
+
+3.  **Scroll down** to the **Files** section at the bottom of the page.
+
+4.  **Choose the correct installer** for your operating system.
 
       * **Windows:** Look for "**Windows installer (64-bit)**".
       * **macOS:** Look for "**macOS 64-bit universal2 installer**".
-      * **Linux:** It's best to use your distribution's package manager (like `apt`, `yum`, or `dnf`). For example, on Ubuntu, you might use `sudo apt install python3.10`.
 
-4.  **Download and run the installer**, following the on-screen instructions. Be sure to check the box that says "**Add Python 3.10 to PATH**" during installation on Windows.
+5.  **Download and run the installer**, following the on-screen instructions. Be sure to check the box that says "**Add Python 3.10 to PATH**" during installation on Windows.
 
 -----
 #### CARLA Simulator Installation (Version 0.9.15) 
@@ -42,37 +52,27 @@ If you don't have python on your system, or have a different version, then pleas
 -----
 
 
-
-    pip install carla random cv2 queue numpy time 
-
-    pip install carla random cv2 queue numpy time 
-
-
-
-
-
-
 #### Running the CARLA Simulator
 * **Open a new terminal window.** <br>
 * **Navigate to the CARLA directory.** Assuming you extracted it to your Home directory or C: (C drive).  <br>
-       * **Linux:**
-          ```bash
+       * **Linux:**    
+          ```    
             cd ~/carla_0.9.15
-          ```
-          * **Windows CMD (Adjust path as required):**
-                  ```
-                  cd
-                  cd C:\carla_0.9.15
-                  ``` <br>
-               * **Execute the CARLA server:**
-                 * **Linux:**  
-                      ```
-                      ./CarlaUE4.sh
-                      ```
-                 * **Windows:**
-                      ```
-                      CarlaUE4.exe        
-                      ```  
+          ```     
+          * **Windows CMD (Adjust path as required):**    
+                  ```    
+                  cd   
+                  cd C:\carla_0.9.15    
+                  ``` 
+               * **Execute the CARLA server:**   
+                  * **Linux:**        
+                       ```
+                       ./CarlaUE4.sh      
+                       ```   
+                   * **Windows:**   
+                   ```         
+                   CarlaUE4.exe              
+                   ```           
       * Alternatively, on Windows, you can simply navigate to the `carla_0.9.15` folder in File Explorer and double-click `CarlaUE4.exe`.
       
 Congratulations\! You are now ready to get started with the world of CARLA.
@@ -89,31 +89,65 @@ Congratulations\! You are now ready to get started with the world of CARLA.
 
 -----
 
-
 ### Instructions to use `2d_lidar.py`:
 
-Firstly, run this command, which makes sure you clone the repo into the right folder.
-```
-cd carla_0.9.15/PythonAPI/examples
-```
+Firstly, run this command, which makes sure you clone the repo into the right folder.   
+Start from HOME directory (```~/```) in your linux terminal.    
+For Windows, Start from C: Folder in cmd.
+
+* The *first* terminal   
+  *FOR WINDOWS:*
+  ```
+  cd C:/carla_0.9.15/PythonAPI/examples
+  ```
+  *FOR LINUX:*
+  ```
+  cd carla_0.9.15/PythonAPI/examples
+  ```
+  
 Now, we are ready to clone the repository.
 
-1.  **Clone the Repository**
+1.  **Clone the Repository Branch**
     Clone the `2-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:
+    
+    ***IF THE PREVIOUS TUTORIALS WERE FOLLOWED IN ORDER, THEN PLEASE SKIP CLONING THE REPO AGAIN:***    
+    ``` 
+    cd BAVT     
+    ```
 
-    ```bash
-    git clone -b 2-D-LIDAR https://github.com/BOCK-AI/BAVT/
+    *FOLLOW FROM HERE ON:*    
+    *FOR WINDOWS:*   
+    It is easier for Linux users to use Git than Windows users.
+    Windows User can simply download zip, extract its contents into the right folder:
+    ```(C:/carla_0.9.15/PythonAPI/examples)```
+    
+    *FOR LINUX:*   
+    Clone the `3-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
+    ```
+    git clone https://github.com/BOCK-AI/BAVT/
     cd BAVT
     ```
-
-2.  **Install Dependencies**
+    Now we must navigate to the right branch on terminal: this command is used for seeing All the existing Branches in the GutHub repo.
+    ```
+    git branch -a
+    ```
+    Now we switch to 3-D-LIDAR branch : (Switch branches using ```git checkout```)
+    ```
+    git checkout origin/3-D-LIDAR
+    ```
+    You can see all branches on your system using:
+    ```
+    git branch
+    ```   
+     
+3.  **Install Dependencies**
     Install the required Python libraries.
-
-    ```bash
-    pip install open3d pillow numpy
+    
+    ```
+    pip install carla random cv2 queue numpy time
     ```
 
-3.  **Run CARLA Server**
+4.  **Run CARLA Server**
     In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).  
 
       * **Linux:**  
@@ -125,21 +159,21 @@ Now, we are ready to clone the repository.
         CarlaUE4.exe
         ```  
 
-4.  **Run the Python Script**  
+5.  **Run the Python Script**  
     Once the CARLA server is running, execute the `rgb_cam.py` file in your first terminal:
 
     ```bash
     python3 rgb_cam.py
     ```
 
-5.  **What You’ll See**  
+6.  **What You’ll See**  
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
       * A live Open3D Window ('Top Down Lidar'), it is fixed. It displays 2d point cloud data updated in real-time. (Green - 2D LIDAR)
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
       * If any error occurs, it might be due to incorrect dependencies or other configuration issues.
 
-6.  **How to Exit**  
+7.  **How to Exit**  
     To stop the script and clean up the simulation, you can either:
 
       * Press **`CTRL + C`** in the terminal where `rgb_cam.py` is running.
