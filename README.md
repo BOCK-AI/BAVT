@@ -11,14 +11,18 @@ If you don't have python on your system, or have a different version, then pleas
 #### Python Installation (Recommend using python 3.10.11)
 ##### Mainly for Linux users: ( I am using Ubuntu 22.04 LTS ) | Python.org 
 
-   *FOR LINUX:*      
+* *FOR LINUX:*      
 * **Linux:** It's best to use your distribution's package manager (like `apt`, `yum`, or `dnf`). For example, on Ubuntu, you might use   
   ```   
   sudo apt install python3.10
   ```    
 
-1. *FOR WINDOWS:*
-   **Go to the official Python downloads page** for version 3.10.11: [https://www.python.org/downloads/release/python-31011/](https://www.python.org/downloads/release/python-31011/)
+* *FOR WINDOWS:*
+1. Please follow this tutorial for CRYSTAL CLEAR instructions on how to download python.     
+   (Change python 3.8 to 3.10 wherever needed.).    
+   `https://tutedude.com/blogs/product/how-to-install-python-on-windows-10-a-guide-for-developers-new-to-python/`      
+2. **Go to the official Python downloads page** for version 3.10.11: [https://www.python.org/downloads/release/python-31011/](https://www.python.org/downloads/release/python-31011/)
+
 
 3.  **Scroll down** to the **Files** section at the bottom of the page.
 
