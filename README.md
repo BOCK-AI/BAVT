@@ -130,10 +130,10 @@ Now, we are ready to clone the repository.
       * A live Open3D Window ('Carla Lidar/Radar') which is an interactive 3D window where you can use your mouse to rotate, pan, and zoom the view. It displays two overlapping point clouds updated in real-time. (Lidar - yellow gradient points, Radar - Blue points)
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
       
-Note: Shortcuts for the **Open3D** window: 
-Ctrl + '+' or Ctrl + '=' -> to make points bigger.
-Ctrl + '-' -> to make points smaller.
-        
+**Note**: Shortcuts for the **Open3D** window:   
+Ctrl + '+' or Ctrl + '=' -> to make points bigger.  
+Ctrl + '-' -> to make points smaller.   
+     
 6.  **How to Exit**
     To stop the script and clean up the simulation, you can either:
 
