@@ -75,9 +75,11 @@ Congratulations\! You are now ready to get started with the world of CARLA.
 
 ### Instructions to use `lidar3d_and_radar.py`:
 
-Firstly, run this command, which makes sure you clone the repo into the right folder. Start from HOME directory (```~/```) in your linux terminal. For Windows, Start from C: Folder in cmd.
+Firstly, run this command, which makes sure you clone the repo into the right folder.   
+Start from HOME directory (```~/```) in your linux terminal.    
+For Windows, Start from C: Folder in cmd.
 
-* The *first* terminal
+* The *first* terminal   
   *FOR WINDOWS:*
   ```
   cd C:/carla_0.9.15/PythonAPI/examples
