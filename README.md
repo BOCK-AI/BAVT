@@ -76,28 +76,34 @@ Congratulations\! You are now ready to get started with the world of CARLA.
 
 ### Instructions to use `rgb_cam.py`:
 
-Firstly, run this command, which makes sure you clone the repo into the right folder.
+Firstly, run this command, which makes sure you clone the repo into the right folder.  Start from HOME directory (```~/```) in your linux terminal. For Windows, Start from C: Folder in cmd.
 ```
 cd carla_0.9.15/PythonAPI/examples
 ```
 Now, we are ready to clone the repository.
 
 1.  **Clone the Repository**
+    
+    *FOR WINDOWS:*   
+    It is easier for Linux users to use Git than Windows users.
+    Windows User can simply download zip, extract its contents into the right folder:
+    ```(C:/carla_0.9.15/PythonAPI/examples)```
+    
+    *FOR LINUX:*   
     Clone the `RGB-Camera` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:
-
-    ```bash
-    git clone -b RGB-Camera https://github.com/BOCK-AI/BAVT/
-    cd BAVT
+    ```bash  
+    git clone -b RGB-Camera https://github.com/BOCK-AI/BAVT/   
+    cd BAVT   
     ```
-
-2.  **Install Dependencies**
+    
+3.  **Install Dependencies**
     Install the required Python libraries.
 
     ```bash
     pip install carla opencv-python numpy
     ```
 
-3.  **Run CARLA Server**
+4.  **Run CARLA Server**
     In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).
 
       * **Linux:**
@@ -109,21 +115,21 @@ Now, we are ready to clone the repository.
         CarlaUE4.exe
         ```
 
-4.  **Run the Python Script**
+5.  **Run the Python Script**
     Once the CARLA server is running, execute the `rgb_cam.py` file in your first terminal:
 
     ```bash
     python3 rgb_cam.py
     ```
 
-5.  **What You’ll See**
+6.  **What You’ll See**
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
       * In the simulator, you will be positioned to spectate *behind* the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
       * If any error occurs, it might be due to incorrect dependencies or other configuration issues.
 
-6.  **How to Exit**
+7.  **How to Exit**
     To stop the script and clean up the simulation, you can either:
 
       * Press **`CTRL + C`** in the terminal where `rgb_cam.py` is running.
