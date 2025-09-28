@@ -220,6 +220,8 @@ or
 
 # The ply_print.py file:
 
+pip install plyfile
+
 What does each axis mean? 
 x → forward/backward (front of the vehicle is usually +x in CARLA’s local frame)
 y → left/right (right is usually +y, left is −y in CARLA’s left-handed system)
