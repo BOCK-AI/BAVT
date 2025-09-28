@@ -93,7 +93,7 @@ Now, we are ready to clone the repository.
     Install the required Python libraries.
 
     ```bash
-    pip install carla threading queue numpy time open3d
+    pip install carla, numpy, cv2, open3d, matplotlib
     ``` 
 
 3.  **Run CARLA Server**
@@ -119,15 +119,17 @@ Now, we are ready to clone the repository.
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
-      * A live Open3D Window ('') which is an interactive 3D window where you can use your mouse to rotate, pan, and zoom the view. It displays two overlapping point clouds updated in real-time. (Lidar - yellow gradient points, Radar - Blue points)
+      * A live Open3D Window ('Carla Lidar/Radar') which is an interactive 3D window where you can use your mouse to rotate, pan, and zoom the view. It displays two overlapping point clouds updated in real-time. (Lidar - yellow gradient points, Radar - Blue points)
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
+
+Not: Shortcuts for the hukj
         
 6.  **How to Exit**
     To stop the script and clean up the simulation, you can either:
 
       * Press **`CTRL + C`** in the terminal where `lidar3d_and_radar.py` is running.
       * Press the **`q`** key while the OpenCV window is active.
-        All actors (vehicle + camera) are destroyed automatically.
+        All actors (vehicle + camera) and windows are destroyed automatically.
 
 -----
 **Some Handy Terminal Shortcuts:**
@@ -136,13 +138,13 @@ Now, we are ready to clone the repository.
  - tab - Autocomplete, if enabled.
  - ctrl + shift + t - for a new tab in the current terminal window.
  - ctrl + shift + n - for a new terminal window.
-
+               
 -----
       
-## Technical Report: CARLA 3D-LIDAR and RADAR Streaming with PID-Based Lane Following
+## **Technical Report: CARLA 3D-LIDAR and RADAR Streaming with PID-Based Lane Following**
 The lidar3d_and_radar.py script demonstrates a comprehensive CARLA simulation environment. It spawns a vehicle and equips it with LiDAR, RADAR, and an RGB camera. The data from these sensors is processed and visualized in real-time using Open3D for 3D point clouds and OpenCV for the camera feed.
 
-Furthermore, the script implements a simple autonomous driving agent using a **PID controller** to make the vehicle follow the lanes of the road.  
+The script implements a simple autonomous driving agent using a **PID controller** to make the vehicle follow the lanes of the road.  
 
 ### \#\# Dependencies
 
