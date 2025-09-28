@@ -67,7 +67,7 @@ cd C:\carla_0.9.15
    ```         
    CarlaUE4.exe              
    ```           
-      * Alternatively, on Windows, you can simply navigate to the `carla_0.9.15` folder in File Explorer and double-click `CarlaUE4.exe`.
+Alternatively, on Windows, you can simply navigate to the `carla_0.9.15` folder in File Explorer and double-click `CarlaUE4.exe`.
       
 Congratulations\! You are now ready to get started with the world of CARLA.
 
@@ -114,7 +114,7 @@ Now, we are ready to clone the repository.
     git clone https://github.com/BOCK-AI/BAVT/
     cd BAVT
     ```
-    Now we must navigate to the right branch on terminal: this command is used for seeing All the existing Branches in the GutHub repo.
+    Now we must navigate to the right branch on terminal: this command is used for seeing All the existing Branches in the GitHub repo.
     ```
     git branch -a
     ```
@@ -163,7 +163,7 @@ Now, we are ready to clone the repository.
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
-      * A live Open3D Window ('Carla Lidar/Radar') which is an interactive 3D window where you can use your mouse to rotate, pan, and zoom the view. It displays two overlapping point clouds updated in real-time. (Lidar - yellow gradient points, Radar - Blue points)
+      * A live Open3D Window ('Carla Lidar/Radar') which is an interactive 3D window where you can use your mouse to rotate, pan, and zoom the view. It displays two overlapping point clouds updated in real-time. (Lidar - yellow gradient points, Radar - Green points)
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
       
 **Note**: Shortcuts for the **Open3D** window:   
