@@ -42,6 +42,16 @@ If you don't have python on your system, or have a different version, then pleas
 -----
 
 
+
+    pip install carla random cv2 queue numpy time 
+
+    pip install carla random cv2 queue numpy time 
+
+
+
+
+
+
 #### Running the CARLA Simulator
 * **Open a new terminal window.** <br>
 * **Navigate to the CARLA directory.** Assuming you extracted it to your Home directory or C: (C drive).  <br>
@@ -123,9 +133,10 @@ Now, we are ready to clone the repository.
     ```
 
 5.  **What You’ll See**  
-
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
+      * A live Open3D Window ('Top Down Lidar'), it is fixed. It displays 2d point cloud data updated in real-time. (Green - 2D LIDAR)
+      * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
       * If any error occurs, it might be due to incorrect dependencies or other configuration issues.
 
 6.  **How to Exit**  
@@ -133,8 +144,8 @@ Now, we are ready to clone the repository.
 
       * Press **`CTRL + C`** in the terminal where `rgb_cam.py` is running.
       * Press the **`q`** key while the OpenCV window is active.
-        All actors (vehicle + camera) are destroyed automatically.
-
+        All actors (vehicle + camera) and windows are destroyed automatically.
+b
 -----
 
 
