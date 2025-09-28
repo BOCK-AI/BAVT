@@ -48,25 +48,25 @@ If you don't have python on your system, or have a different version, then pleas
 
 #### Running the CARLA Simulator
 * **Open a new terminal window.** <br>
-* **Navigate to the CARLA directory.** Assuming you extracted it to your Home directory or C: (C drive).  
-       * **Linux:**      
-          ```    
-            cd ~/carla_0.9.15
-          ```     
-          * **Windows CMD (Adjust path as required):**    
-                  ```    
-                  cd   
-                  cd C:\carla_0.9.15    
-                  ``` <br>
-               * **Execute the CARLA server:**   
-                  * **Linux:**        
-                       ```
-                       ./CarlaUE4.sh      
-                       ```   
-                   * **Windows:**   
-                   ```         
-                   CarlaUE4.exe              
-                   ```           
+* **Navigate to the CARLA directory.** Assuming you extracted it to your Home directory or C: (C drive).
+* * **Linux:**      
+```    
+cd ~/carla_0.9.15
+```     
+* **Windows CMD (Adjust path as required):**    
+```    
+cd   
+cd C:\carla_0.9.15     
+```      
+* **Execute the CARLA server:**   
+  * **Linux:**        
+       ```
+       ./CarlaUE4.sh      
+       ```   
+   * **Windows:**   
+   ```         
+   CarlaUE4.exe              
+   ```           
       * Alternatively, on Windows, you can simply navigate to the `carla_0.9.15` folder in File Explorer and double-click `CarlaUE4.exe`.
       
 Congratulations\! You are now ready to get started with the world of CARLA.
