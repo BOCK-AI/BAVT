@@ -109,7 +109,7 @@ Now, we are ready to clone the repository.
     Install the required Python libraries.
 
     ```bash
-    pip install carla numpy cv2 open3d matplotlib
+    pip install carla numpy opencv open3d matplotlib
     ``` 
 
 4.  **Run CARLA Server**
