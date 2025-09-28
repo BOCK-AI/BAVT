@@ -51,29 +51,28 @@ If you don't have python on your system, or have a different version, then pleas
      * **Rename** the extracted folder to `carla_0.9.15` for consistency.  
 -----
 
-
 #### Running the CARLA Simulator
 * **Open a new terminal window.** <br>
-* **Navigate to the CARLA directory.** Assuming you extracted it to your Home directory or C: (C drive).  <br>
-       * **Linux:**    
-          ```    
-            cd ~/carla_0.9.15
-          ```     
-          * **Windows CMD (Adjust path as required):**    
-                  ```    
-                  cd   
-                  cd C:\carla_0.9.15    
-                  ``` 
-               * **Execute the CARLA server:**   
-                  * **Linux:**        
-                       ```
-                       ./CarlaUE4.sh      
-                       ```   
-                   * **Windows:**   
-                   ```         
-                   CarlaUE4.exe              
-                   ```           
-      * Alternatively, on Windows, you can simply navigate to the `carla_0.9.15` folder in File Explorer and double-click `CarlaUE4.exe`.
+* **Navigate to the CARLA directory.** Assuming you extracted it to your Home directory or C: (C drive).
+* * **Linux:**      
+```    
+cd ~/carla_0.9.15
+```     
+* **Windows CMD (Adjust path as required):**    
+```    
+cd   
+cd C:\carla_0.9.15     
+```      
+* **Execute the CARLA server:**   
+  * **Linux:**        
+       ```
+       ./CarlaUE4.sh      
+       ```   
+   * **Windows:**   
+   ```         
+   CarlaUE4.exe              
+   ```           
+Alternatively, on Windows, you can simply navigate to the `carla_0.9.15` folder in File Explorer and double-click `CarlaUE4.exe`.
       
 Congratulations\! You are now ready to get started with the world of CARLA.
 
@@ -108,13 +107,6 @@ For Windows, Start from C: Folder in cmd.
 Now, we are ready to clone the repository.
 
 1.  **Clone the Repository Branch**
-    Clone the `2-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:
-    
-    ***IF THE PREVIOUS TUTORIALS WERE FOLLOWED IN ORDER, THEN PLEASE SKIP CLONING THE REPO AGAIN:***    
-    ``` 
-    cd BAVT     
-    ```
-
     *FOLLOW FROM HERE ON:*    
     *FOR WINDOWS:*   
     It is easier for Linux users to use Git than Windows users.
@@ -122,32 +114,35 @@ Now, we are ready to clone the repository.
     ```(C:/carla_0.9.15/PythonAPI/examples)```
     
     *FOR LINUX:*   
-    Clone the `3-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
-    ```
-    git clone https://github.com/BOCK-AI/BAVT/
-    cd BAVT
-    ```
+    Clone the `2-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:
+    ***IT IS NOT REQUIRED TO CLONE THE REPOSITORY MULTIPLE TIMES. PLEASE IGNORE THIS IF YOU HAVE ALREADY CLONED IT IN A PREVIOUS STEP.***
+    ```    git clone https://github.com/BOCK-AI/BAVT/   ```       
+    
+    **Enter** the BAVT directory.       
+    ``` 
+    cd BAVT     
+    ```   
     Now we must navigate to the right branch on terminal: this command is used for seeing All the existing Branches in the GutHub repo.
-    ```
+    ```       
     git branch -a
+    ```    
+    Now we switch to 2-D-LIDAR branch : (Switch branches using ```git checkout```)
     ```
-    Now we switch to 3-D-LIDAR branch : (Switch branches using ```git checkout```)
-    ```
-    git checkout origin/3-D-LIDAR
+    git checkout origin/2-D-LIDAR
     ```
     You can see all branches on your system using:
     ```
     git branch
     ```   
      
-3.  **Install Dependencies**
+2.  **Install Dependencies**
     Install the required Python libraries.
     
     ```
     pip install carla random cv2 queue numpy time
     ```
 
-4.  **Run CARLA Server**
+3.  **Run CARLA Server**
     In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).  
 
       * **Linux:**  
@@ -159,27 +154,30 @@ Now, we are ready to clone the repository.
         CarlaUE4.exe
         ```  
 
-5.  **Run the Python Script**  
-    Once the CARLA server is running, execute the `rgb_cam.py` file in your first terminal:
+4.  **Run the Python Script**  
+    Once the CARLA server is running, execute the `2d_lidar.py` file in your first terminal:
 
     ```bash
-    python3 rgb_cam.py
+    python3 2d_lidar.py
     ```
 
-6.  **What You’ll See**  
+5.  **What You’ll See**  
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
       * A live Open3D Window ('Top Down Lidar'), it is fixed. It displays 2d point cloud data updated in real-time. (Green - 2D LIDAR)
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
-      * If any error occurs, it might be due to incorrect dependencies or other configuration issues.
+      
+**Note**: Shortcuts for the **Open3D** window:   
+Ctrl + '+' or Ctrl + '=' -> to make points bigger.  
+Ctrl + '-' -> to make points smaller.   
 
-7.  **How to Exit**  
+6.  **How to Exit**  
     To stop the script and clean up the simulation, you can either:
 
-      * Press **`CTRL + C`** in the terminal where `rgb_cam.py` is running.
+      * Press **`CTRL + C`** in the terminal where `2d_lidar.py` is running.
       * Press the **`q`** key while the OpenCV window is active.
         All actors (vehicle + camera) and windows are destroyed automatically.
-b
+
 -----
 
 
