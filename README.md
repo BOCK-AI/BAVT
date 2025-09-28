@@ -11,17 +11,23 @@ If you don't have python on your system, or have a different version, then pleas
 #### Python Installation (Recommend using python 3.10.11)
 ##### Mainly for Linux users: ( I am using Ubuntu 22.04 LTS ) | Python.org 
 
-1.  **Go to the official Python downloads page** for version 3.10.11: [https://www.python.org/downloads/release/python-31011/](https://www.python.org/downloads/release/python-31011/)
+   *FOR LINUX:*      
+* **Linux:** It's best to use your distribution's package manager (like `apt`, `yum`, or `dnf`). For example, on Ubuntu, you might use   
+  ```   
+  sudo apt install python3.10
+  ```    
 
-2.  **Scroll down** to the **Files** section at the bottom of the page.
+1. *FOR WINDOWS:*
+   **Go to the official Python downloads page** for version 3.10.11: [https://www.python.org/downloads/release/python-31011/](https://www.python.org/downloads/release/python-31011/)
 
-3.  **Choose the correct installer** for your operating system.
+3.  **Scroll down** to the **Files** section at the bottom of the page.
+
+4.  **Choose the correct installer** for your operating system.
 
       * **Windows:** Look for "**Windows installer (64-bit)**".
       * **macOS:** Look for "**macOS 64-bit universal2 installer**".
-      * **Linux:** It's best to use your distribution's package manager (like `apt`, `yum`, or `dnf`). For example, on Ubuntu, you might use `sudo apt install python3.10`.
 
-4.  **Download and run the installer**, following the on-screen instructions. Be sure to check the box that says "**Add Python 3.10 to PATH**" during installation on Windows.
+5.  **Download and run the installer**, following the on-screen instructions. Be sure to check the box that says "**Add Python 3.10 to PATH**" during installation on Windows.
 
 -----
 #### CARLA Simulator Installation (Version 0.9.15) 
