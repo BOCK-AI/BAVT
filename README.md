@@ -106,8 +106,8 @@ For Windows, Start from C: Folder in cmd.
   
 Now, we are ready to clone the repository.
 
-1.  **Clone the Repository Branch**
-    *FOLLOW FROM HERE ON:*    
+1.  **Clone the Repository Branch**   
+            
     *FOR WINDOWS:*   
     It is easier for Linux users to use Git than Windows users.
     Windows User can simply download zip, extract its contents into the right folder:
