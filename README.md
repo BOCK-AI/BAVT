@@ -110,7 +110,7 @@ Now, we are ready to clone the repository.
             
     *FOR WINDOWS:*   
     It is easier for Linux users to use Git than Windows users.
-    Windows User can simply download zip, extract its contents into the right folder:
+    Windows Users can simply download zip, extract its contents into the right folder:
     ```   
     (C:/carla_0.9.15/PythonAPI/examples/BAVT)
     ```    
@@ -147,25 +147,25 @@ Now, we are ready to clone the repository.
     ```  
 
 4.  **Run CARLA Server**
-    In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).  
-
-      * **Linux:**  
+    In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).
+    Make sure you are in the right directories:        
+      * **Linux:**  ```(~/carla_0.9.15)```          
         ```
         ./CarlaUE4.sh
         ```  
-      * **Windows:**  
+      * **Windows:** ```(C:/carla_0.9.15)```     
         ```
         CarlaUE4.exe
         ```  
 
-5.  **Run the Python Script**  
+6.  **Run the Python Script**  
     Once the CARLA server is running, execute the `2d_lidar.py` file in your first terminal:
 
     ```bash
     python3 2d_lidar.py
     ```
 
-6.  **What You’ll See**  
+7.  **What You’ll See**  
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * A live OpenCV Window ('Top Down Lidar'), it is fixed. It displays 2d point cloud data updated in real-time. (Green - 2D LIDAR)
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
