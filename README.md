@@ -225,4 +225,4 @@ The code has three main parts: **LiDAR processing**, a **PID controller** for dr
 -   When the script is stopped, the `finally` block runs. It's very important as it **destroys all the created actors** (car, sensor) and **switches the CARLA server back to normal asynchronous mode**. This prevents the server from being left in a frozen state.
 
 
------------------------------------------------------
+**---***
