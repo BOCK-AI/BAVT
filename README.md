@@ -170,9 +170,9 @@ Now, we are ready to clone the repository.
       * A live OpenCV Window ('Top Down Lidar'), it is fixed. It displays 2d point cloud data updated in real-time. (Green - 2D LIDAR)
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
       
-**Note**: Shortcuts for the **Open3D** window:   
-Ctrl + '+' or Ctrl + '=' -> to make points bigger.  
-Ctrl + '-' -> to make points smaller.   
+**Note**: Shortcuts for the **OpenCV** window:   
+Ctrl + Shift + '+' or Ctrl + Shift + '= ' -> to Zoom in.  
+Ctrl + '-' -> to Zoom out.   
 
 6.  **How to Exit**  
     To stop the script and clean up the simulation, you can either:
