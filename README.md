@@ -132,7 +132,7 @@ Now, we are ready to clone the repository.
     ```    
     Now we switch to 2-D-LIDAR branch : (Switch branches using ```git checkout```)
     ```
-    git checkout origin/2-D-LIDAR
+    git checkout 2-D-LIDAR
     ```
     You can see all branches on your system using:
     ```
