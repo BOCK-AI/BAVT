@@ -4,9 +4,9 @@ import numpy as np
 from PIL import Image
 
 # Input/Output paths
-lidar_path = "/home/sharanya/carla_0.9.15/PythonAPI/examples/own_files/frame_pictures/lidar_output/"  # The .ply files are stored here.
+lidar_path = "/carla_0.9.15/PythonAPI/examples/BAVT/"  # The .ply files are stored in this path variable.
 
-folder = "/home/sharanya/carla_0.9.15/PythonAPI/examples/own_files/frame_pictures/lidar_faster/jpg" # This is where we save our images as jpg.
+folder = "/carla_0.9.15/PythonAPI/examples/BAVT/" # This is where we save our screenshots (.jpg).
 os.makedirs(folder, exist_ok=True)
 
 # Create one Visualizer instance
