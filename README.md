@@ -65,9 +65,9 @@ cd C:\carla_0.9.15
 ```      
 * **Execute the CARLA server:**   
   * **Linux:**        
-       ```
-       ./CarlaUE4.sh      
-       ```   
+   ```
+   ./CarlaUE4.sh      
+   ```   
    * **Windows:**   
    ```         
    CarlaUE4.exe              
