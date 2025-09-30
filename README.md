@@ -101,13 +101,21 @@ For Windows, Start from C: Folder in cmd.
   (Clone only the first time. Do not need to clone repeatedly.)
 Now, we are ready to clone the repository.
 
-1.  **Clone the Repository**
+1.  **Clone the Repository and switch branch**
 
     *FOR WINDOWS:*   
     It is easier for Linux users to use Git than Windows users.
-    Windows User can simply download zip, extract its contents into the right folder:
-    ```(C:/carla_0.9.15/PythonAPI/examples)```
-    
+    To Create a BAVT folder: (only first time)         
+    ```
+    cd C:/carla_0.9.15/PythonAPI/examples
+    mkdir BAVT
+    cd BAVT    
+    ```      
+    Download the zip, extract its contents into the below BAVT folder:            
+    ```
+    (C:/carla_0.9.15/PythonAPI/examples/BAVT)
+    ```
+           
     *FOR LINUX:*   
     Clone the `3-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
     ```
