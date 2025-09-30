@@ -139,7 +139,7 @@ Now, we are ready to clone the repository.
     Install the required Python libraries.
     
     ```
-    pip install carla random cv2 queue numpy time
+    pip install carla opencv-python queue numpy time
     ```
 
 3.  **Run CARLA Server**
