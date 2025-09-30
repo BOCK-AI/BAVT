@@ -104,7 +104,7 @@ Now, we are ready to clone the repository.
 1.  **Clone the Repository and switch branch**
 
     *FOR WINDOWS:*   
-    It is easier for Linux users to use Git than Windows users.
+    It is easier for Linux users to use Git than Windows users. Thus, I suggest downloading zip and extracting the contents into te BAVT folder we will create below.                      
     To Create a BAVT folder: (only first time)         
     ```
     cd C:/carla_0.9.15/PythonAPI/examples
