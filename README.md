@@ -163,8 +163,7 @@ Now, we are ready to clone the repository.
 
 5.  **What You’ll See**  
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
-      * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
-      * A live Open3D Window ('Top Down Lidar'), it is fixed. It displays 2d point cloud data updated in real-time. (Green - 2D LIDAR)
+      * A live OpenCV Window ('Top Down Lidar'), it is fixed. It displays 2d point cloud data updated in real-time. (Green - 2D LIDAR)
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
       
 **Note**: Shortcuts for the **Open3D** window:   
