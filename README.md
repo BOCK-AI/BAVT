@@ -1,11 +1,12 @@
-#  BAVT - `2d_lidar.py` & `convert_ply_to_jpg.py` Documentation
+#  BAVT - `2d_lidar.py` & `screenshot_ply.py` Documentation
 
 There are two documents here:
 1. LiDAR Top-Down Visualization with PID Lane-Following (CARLA)
-2. LiDAR PLY to JPEG Converter (Open3D)
+2. PLY File to JPEG Converter (Open3D)
 
 ---
-
+## 1. LiDAR Top-Down Visualization with PID Lane-Following (CARLA)    
+           
 ### **Usage of this document** ( This Documentation is primarily focused on Linux )
 
 ##### Pre-Requisites:
@@ -225,4 +226,65 @@ The code has three main parts: **LiDAR processing**, a **PID controller** for dr
 -   When the script is stopped, the `finally` block runs. It's very important as it **destroys all the created actors** (car, sensor) and **switches the CARLA server back to normal asynchronous mode**. This prevents the server from being left in a frozen state.
 
 
-**---***
+------------------------------------------------------------      
+
+## 2. PLY File to JPEG Converter (Open3D)    
+### Instructions to use `convert_ply_to_jpg.py`:
+
+Firstly, run this command, which makes sure you clone the repo into the right folder.   
+Start from HOME directory (```~/```) in your linux terminal.    
+For Windows, Start from C: Folder in cmd.
+
+* The *first* terminal   
+  *FOR WINDOWS:*
+  ```
+  cd C:/carla_0.9.15/PythonAPI/examples
+  ```
+  *FOR LINUX:*
+  ```
+  cd carla_0.9.15/PythonAPI/examples
+  ```
+1. Assuming you have already **cloned the repository** (Only to be done once.)
+   (Directions for the same are given above in 1. Clone the repository sub-section under "Instructions to use `2d_lidar.py`"):    
+    
+    **Enter** the BAVT directory.       
+    ``` 
+    cd BAVT     
+    ```   
+    **Now we must navigate to the right branch on terminal:** (If not already in the 2-D-LIDAR branch)      
+    This command is used for seeing All the existing Branches in the GutHub repo.     
+    ```       
+    git branch -a
+    ```    
+    Now we switch to 2-D-LIDAR branch : (Switch branches using ```git checkout```)
+    ```
+    git checkout 2-D-LIDAR
+    ```
+    You can see all branches on your system using:
+    ```
+    git branch
+    ```   
+     
+3.  **Install Dependencies**
+    Install the required Python libraries.
+    
+    ```
+    pip install open3d numpy Pillow
+    ```  
+
+4. **Update the absolute Paths in the file: convert_ply_to_jpg.py**
+   User will need to update their path variables in the file.
+   
+5. **Run the Python Script**  
+    Once the CARLA server is running, execute the `2d_lidar.py` file in your first terminal:
+
+    ```bash
+    python3 screenshot_ply.py
+    ```
+
+6.  **How to Exit**  
+    To stop the script and clean up the simulation, you can either:
+        
+      * Press **`CTRL + C`** in the terminal where `2d_lidar.py` is running.
+      * Press the **`q`** key while the OpenCV window is active.
+        All actors (vehicle + camera) and windows are destroyed automatically.
