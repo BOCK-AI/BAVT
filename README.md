@@ -139,8 +139,8 @@ Now, we are ready to clone the repository.
     Install the required Python libraries.
     
     ```
-    pip install carla opencv-python numpy time
-    ```
+    pip install carla opencv-python numpy
+    ```  
 
 3.  **Run CARLA Server**
     In a **separate terminal**, start the CARLA simulator (same as described in the "Running the CARLA Simulator" section above).  
