@@ -112,7 +112,7 @@ Now, we are ready to clone the repository.
     It is easier for Linux users to use Git than Windows users.
     Windows User can simply download zip, extract its contents into the right folder:
     ```   
-    (C:/carla_0.9.15/PythonAPI/examples)
+    (C:/carla_0.9.15/PythonAPI/examples/BAVT)
     ```    
 
     *FOR LINUX:*        
