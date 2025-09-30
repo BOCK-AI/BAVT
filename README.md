@@ -23,7 +23,7 @@ If you don't have python on your system, or have a different version, then pleas
   sudo apt install python3.10
   ```    
 
-* *FOR WINDOWS:*
+*FOR WINDOWS:*
 1. Please follow this tutorial for CRYSTAL CLEAR instructions on how to download python.     
    (Change python 3.8 to 3.10 wherever needed.).    
    `https://tutedude.com/blogs/product/how-to-install-python-on-windows-10-a-guide-for-developers-new-to-python/`      
