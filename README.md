@@ -115,7 +115,7 @@ Now, we are ready to clone the repository.
     
     *FOR LINUX:*   
     Clone the `2-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:
-    ***IT IS NOT REQUIRED TO CLONE THE REPOSITORY MULTIPLE TIMES. PLEASE IGNORE THIS IF YOU HAVE ALREADY CLONED IT IN A PREVIOUS STEP.***
+    ***IT IS NOT REQUIRED TO CLONE THE REPOSITORY MULTIPLE TIMES. PLEASE IGNORE THIS IF YOU HAVE ALREADY CLONED IT IN A PREVIOUS TUTORIAL.***
     ```    git clone https://github.com/BOCK-AI/BAVT/   ```       
     
     **Enter** the BAVT directory.       
@@ -173,11 +173,53 @@ Ctrl + '-' -> to make points smaller.
 
 6.  **How to Exit**  
     To stop the script and clean up the simulation, you can either:
-
+        
       * Press **`CTRL + C`** in the terminal where `2d_lidar.py` is running.
       * Press the **`q`** key while the OpenCV window is active.
         All actors (vehicle + camera) and windows are destroyed automatically.
 
+-----   
+
+**Some Handy Terminal Shortcuts:**
+ - ctrl + shift + v - paste
+ - ctrl + shift + c - copy
+ - tab - Autocomplete, if enabled.
+ - ctrl + shift + t - for a new tab in the current terminal window.
+ - ctrl + shift + n - for a new terminal window.
+               
 -----
+
+
+## **Technical Report: CARLA 2D-LIDAR Streaming with PID-Based Lane Following**
+
+It spawns a car with a LiDAR sensor, makes it follow lanes through waypoints on the map, and visualizes the LiDAR data in real-time. 
+The code has three main parts: **LiDAR processing**, a **PID controller** for driving, and a **main simulation loop**.
+
+### LiDAR Data Processing
+-   A **LiDAR sensor** is attached to the car, which scans the environment with lasers.
+-   The `process_lidar_frames` function acts as a listener. Every time the sensor gets a reading, this function is triggered.
+-   It converts the raw 3D point cloud data into a 2D **top-down image** (like a bird's-eye view map).
+-   To avoid slowing down the simulation, it pushes this image into a **queue**. The main loop can then grab images from this queue whenever it's ready. If the queue is full, the new frame is simply dropped.
+
+### PID Controller for Driving
+-   A **PID Controller** is a simple but powerful control algorithm used to minimize errors. Think of it like how you steer a car:
+    -   **Proportional (P):** If you're far from the lane center, you turn the wheel sharply. The correction is proportional to the error.
+    -   **Integral (I):** If you're consistently a little bit off to one side (like in a long curve), you start holding the wheel at a slight angle to correct this persistent error.
+    -   **Derivative (D):** As you approach the center of the lane, you start straightening the wheel to avoid overshooting. This predicts future error.
+-   In the script, the "error" is the **cross-track error**, which is the car's distance from the center of its lane. The PID controller calculates the necessary steering angle to reduce this error to zero.
+
+### Main Simulation Loop
+-   The script connects to the CARLA server and sets it to **synchronous mode**. This means the simulation only advances one step at a time when the script tells it to (`world.tick()`), ensuring the sensor data and vehicle commands are perfectly aligned.
+-   In each step of the main `while` loop, the script does the following:
+    1.  **Advances the simulation** one frame.
+    2.  **Calculates the cross-track error** by finding the path ahead and seeing how far the car is from it.
+    3.  **Feeds the error** to the PID controller to get a steering correction.
+    4.  **Applies control** to the vehicle (throttle and the calculated steering).
+    5.  **Checks the queue** for a new LiDAR image and displays it on the screen using OpenCV.
+-   The loop continues until you press the 'q' key.
+
+### Cleanup
+-   When the script is stopped, the `finally` block runs. It's very important as it **destroys all the created actors** (car, sensor) and **switches the CARLA server back to normal asynchronous mode**. This prevents the server from being left in a frozen state.
+
 
 
