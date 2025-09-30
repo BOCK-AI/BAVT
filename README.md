@@ -17,7 +17,7 @@ If you don't have python on your system, or have a different version, then pleas
 #### Python Installation (Recommend using python 3.10.11)
 ##### Mainly for Linux users: ( I am using Ubuntu 22.04 LTS ) | Python.org 
 
-* *FOR LINUX:*      
+*FOR LINUX:*      
 * **Linux:** It's best to use your distribution's package manager (like `apt`, `yum`, or `dnf`). For example, on Ubuntu, you might use   
   ```   
   sudo apt install python3.10
