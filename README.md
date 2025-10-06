@@ -8,37 +8,32 @@
 
 Firstly, run this command, which makes sure you clone the repo into the right folder.   
 Start from HOME directory (```~/```) in your linux terminal.    
-For Windows, Start from C: Folder in cmd.
+For Windows, Start from C: Folder in cmd. I am assuming you have created the BAVT Folder already. If not, please refer Tutorial 1 - Basic Intro to Carla OR 3-D-LIDAR branch README Doc
 
 * The *first* terminal   
-  *FOR WINDOWS:*
+  *FOR WINDOWS:* (CMD)     
   ```
-  cd C:/carla_0.9.15/PythonAPI/examples
+  cd C:/carla_0.9.15/PythonAPI/examples/BAVT
   ```
-  *FOR LINUX:*
+  *FOR LINUX:* (Terminal)
   ```
   cd carla_0.9.15/PythonAPI/examples
   ```
-  (Clone only the first time. Do not need to clone repeatedly.)
-Now, we are ready to clone the repository.
+  ***(Clone only the first time. Do not need to clone repeatedly. Once cloned, we can just switch between branches as convenient.)
+Now, we are ready to clone the repository.***
 
 1.  **Clone the Repository and switch branch**
 
     *FOR WINDOWS:*   
     It is easier for Linux users to use Git than Windows users. Thus, I suggest downloading zip and extracting the contents into te BAVT folder we will create below.                      
-    To Create a BAVT folder: (only first time)         
-    ```
-    cd C:/carla_0.9.15/PythonAPI/examples
-    mkdir BAVT
-    cd BAVT    
-    ```      
-    Download the zip, extract its contents into the below BAVT folder:            
+    
+    Download the zip, extract its contents into the below BAVT folder:           
     ```
     (C:/carla_0.9.15/PythonAPI/examples/BAVT)
     ```
            
     *FOR LINUX:*   
-    Clone the `3-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
+    Clone the `GNSS-sensor` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
     ```
     git clone https://github.com/BOCK-AI/BAVT/
     cd BAVT
