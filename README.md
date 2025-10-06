@@ -74,17 +74,16 @@ Now, we are ready to clone the repository.
         (If this doesn't work, then go to your file explorer, open C:, open the carla_0.9.15 folder. Double click on the CarlaUE4.exe. Carla is now going to start running.)
 
 6.  **Run the Python Script**
-    Once the CARLA server is running, execute the `lidar3d_and_radar.py` file in your *first* terminal: 
+    Once the CARLA server is running, execute the `gnss.py` file in your *first* terminal: 
 
     ```bash
-    python3 lidar3d_and_radar.py
+    python3 gnss.py
     ```
 
 7.  **What You’ll See**
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
-      * A live OpenCV window displaying the **RGB camera feed** from the vehicle's front camera.
-      * A live Open3D Window ('Carla Lidar/Radar') which is an interactive 3D window where you can use your mouse to rotate, pan, and zoom the view. It displays two overlapping point clouds updated in real-time. (Lidar - yellow gradient points, Radar - Green points)
+      * Live Location readings from simulator in terminal every 0.05 seconds. This includes: Latitude, Longitude, Altitude, Frame, Timestamp.
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
       
 **Note**: Shortcuts for the **Open3D** window:   
