@@ -122,7 +122,7 @@ Now, we are ready to clone the repository.
     git clone https://github.com/BOCK-AI/BAVT/
     cd BAVT
     ```
-    Now we must navigate to the right branch on terminal: this command is used for seeing All the existing Branches in the GitHub repo.
+    Now we must navigate to the right branch on terminal: (This command is used for seeing All the existing Branches in the GitHub repo.)
     ```
     git branch -a
     ```
