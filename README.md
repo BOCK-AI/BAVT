@@ -19,8 +19,8 @@ For Windows, Start from C: Folder in cmd. I am assuming you have created the BAV
   ```
   cd carla_0.9.15/PythonAPI/examples
   ```
-  ***(Clone only the first time. Do not need to clone repeatedly. Once cloned, we can just switch between branches as convenient.)
-Now, we are ready to clone the repository.***
+  ***(Clone only the first time. Do not need to clone repeatedly. Once cloned, we can just switch between branches as convenient.)***
+Now, we are ready to clone the repository.
 
 1.  **Clone the Repository and switch branch**
 
@@ -34,14 +34,14 @@ Now, we are ready to clone the repository.***
            
     *FOR LINUX:*   
     Clone the `GNSS-sensor` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
-    Here, I am assuming you have cloned BAVT main from previous **3-D-LIDAR** README Documentation.
+    Here, I am assuming you have cloned BAVT 'main' branch from previous **3-D-LIDAR** README Documentation.
     Now we must navigate to the right branch on terminal: This command is used for seeing All the existing Branches in the GitHub repo.
     ```
     git branch -a
     ```
-    Now we switch to 3-D-LIDAR branch : (Switch branches using ```git checkout```)
+    Now we switch to GNSS-sensor branch : (Switch branches using ```git checkout```)
     ```
-    git checkout origin/3-D-LIDAR
+    git checkout GNSS-sensor
     ```
     You can see all branches on your system using:
     ```
@@ -52,7 +52,7 @@ Now, we are ready to clone the repository.***
     Install the required Python libraries.
 
     ```bash
-    pip install carla numpy opencv-python open3d matplotlib
+    pip install carla 
     ``` 
 
 4.  **Run CARLA Server**
