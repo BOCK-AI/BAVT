@@ -8,7 +8,7 @@
 
 Firstly, run this command, which makes sure you clone the repo into the right folder.   
 Start from HOME directory (```~/```) in your linux terminal.    
-For Windows, Start from C: Folder in cmd. I am assuming you have created the BAVT Folder already. If not, please refer Tutorial 1 - Basic Intro to Carla OR 3-D-LIDAR branch README Doc
+For Windows, Start from C: Folder in cmd. I am assuming you have created the BAVT Folder already. If not, please refer Tutorial 1 - Basic Intro to Carla OR 3-D-LIDAR branch README Doc.
 
 * The *first* terminal   
   *FOR WINDOWS:* (CMD)     
@@ -25,7 +25,7 @@ Now, we are ready to clone the repository.
 1.  **Clone the Repository and switch branch**
 
     *FOR WINDOWS:*   
-    It is easier for Linux users to use Git than Windows users. Thus, I suggest downloading zip and extracting the contents into te BAVT folder we will create below.                      
+    It is easier for Linux users to use Git than Windows users. Thus, I suggest downloading zip and extracting the contents into the BAVT folder we will create below.                      
     
     Download the zip, extract its contents into the below BAVT folder:           
     ```
@@ -85,17 +85,13 @@ Now, we are ready to clone the repository.
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
       * Live Location readings from simulator in terminal every 0.05 seconds. This includes: Latitude, Longitude, Altitude, Frame, Timestamp.
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
-      
-**Note**: Shortcuts for the **Open3D** window:   
-Ctrl + '+' or Ctrl + '=' -> to make points bigger.  
-Ctrl + '-' -> to make points smaller.   
+  
      
 6.  **How to Exit**
     To stop the script and clean up the simulation, you can either:
 
       * Press **`CTRL + C`** in the terminal where `lidar3d_and_radar.py` is running.
-      * Press the **`q`** key while the OpenCV window is active.
-        All actors (vehicle + camera) and windows are destroyed automatically.
+      All actors (vehicle + camera) and windows are destroyed automatically.
 
 -----
 
