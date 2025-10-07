@@ -90,7 +90,7 @@ Now, we are ready to clone the repository.
 6.  **How to Exit**
     To stop the script and clean up the simulation, you can either:
 
-      * Press **`CTRL + C`** in the terminal where `lidar3d_and_radar.py` is running.
+      * Press **`CTRL + C`** in the terminal where `depth_cam.py` is running.
       All actors (vehicle + camera) and windows are destroyed automatically.
 
 -----
