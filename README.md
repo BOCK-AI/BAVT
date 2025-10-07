@@ -1,12 +1,12 @@
 # BAVT - `gnss.py` Documentation
 
-#### NOTE: For the more Basic Documentation (Installation of carla, python, etc.), refer either of the 3-D-LIDAR, 2-D-LIDAR, RGB_CAM branches.
+#### NOTE: For the more Basic Documentation (Installation of carla, python, etc.), refer to the READMEs under either of the 3-D-LIDAR, 2-D-LIDAR, RGB_CAM branches.
 
 ---
 
 ### Instructions to use `gnss.py`:
 
-Firstly, run this command, which makes sure you clone the repo into the right folder.   
+Firstly, run this command, to be in the right folder.   
 Start from HOME directory (```~/```) in your linux terminal.    
 For Windows, Start from C: Folder in cmd. I am assuming you have created the BAVT Folder already. If not, please refer Tutorial 1 - Basic Intro to Carla OR 3-D-LIDAR branch README Doc.
 
