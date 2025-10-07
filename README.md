@@ -83,7 +83,7 @@ Now, we are ready to clone the repository.
 7.  **What You’ll See**
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
-      * An OpenCV window showing the Logarithmic Depth output is seen, titled "Depth sensing camera".
+      * An OpenCV window showing the Logarithmic Depth output is seen (Black - closer, White - farther), titled "Depth sensing camera".
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
   
      
