@@ -103,9 +103,8 @@ Now, we are ready to clone the repository.
  - ctrl + shift + n - for a new terminal window.
                
 -----
-
-
-## Technical Report: GNSS Location and Navigation sensor.
+    
+## Technical Report: Depth Sensing Camera in CARLA
 
 This report provides a technical analysis of a Python script designed to implement an autonomous lane-following vehicle in the CARLA simulator. The agent utilizes a PID controller for steering logic and a depth camera for environmental perception, visualized via OpenCV.
 
