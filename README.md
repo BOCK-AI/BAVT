@@ -32,8 +32,7 @@ Now, we are ready to clone the repository.
     (C:/carla_0.9.15/PythonAPI/examples/BAVT)
     ```
            
-    *FOR LINUX:*   
-    Clone the `GNSS-sensor` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
+    *FOR LINUX:*     
     Here, I am assuming you have cloned BAVT 'main' branch from previous **3-D-LIDAR** README Documentation.
     Now we must navigate to the right branch on terminal: This command is used for seeing All the existing Branches in the GitHub repo.
     ```
