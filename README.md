@@ -104,7 +104,7 @@ Now, we are ready to clone the repository.
                
 -----
     
-## Technical Report: Depth Sensing Camera in CARLA
+## Technical Report: CARLA Autonomous Agent with Depth Sensing Camera
 
 This report provides a technical analysis of a Python script designed to implement an autonomous lane-following vehicle in the CARLA simulator. The agent utilizes a PID controller for steering logic and a depth camera for environmental perception, visualized via OpenCV.
 
