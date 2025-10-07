@@ -22,7 +22,7 @@ For Windows, Start from C: Folder in cmd. I am assuming you have created the BAV
   ***(Clone only the first time. Do not need to clone repeatedly. Once cloned, we can just switch between branches as convenient.)***
 Now, we are ready to clone the repository.
 
-1.  **Clone the Repository and switch branch**
+1.  **Clone Repository and switch branch**
 
     *FOR WINDOWS:*    
     It is easier for Linux users to use Git than Windows users. Thus, I suggest downloading zip and extracting the contents into the BAVT folder we will create below.                      
@@ -33,7 +33,6 @@ Now, we are ready to clone the repository.
     ```
             
     *FOR LINUX:*   
-    Clone the `Depth-Sensing-camera` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
     Here, I am assuming you have cloned BAVT 'main' branch from previous **3-D-LIDAR** README Documentation.
     Now we must navigate to the right branch on terminal: This command is used for seeing All the existing Branches in the GitHub repo.
     ```
