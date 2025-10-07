@@ -17,7 +17,7 @@ For Windows, Start from C: Folder in cmd. I am assuming you have created the BAV
   ```
   *FOR LINUX:* (Terminal)
   ```
-  cd carla_0.9.15/PythonAPI/examples
+  cd carla_0.9.15/PythonAPI/examples/BAVT
   ```
   ***(Clone only the first time. Do not need to clone repeatedly. Once cloned, we can just switch between branches as convenient.)***
 Now, we are ready to clone the repository.
