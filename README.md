@@ -91,8 +91,9 @@ Now, we are ready to clone the repository.
     
     *FOR LINUX:*   
     Clone the `RGB-Camera` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:
-    ```bash  
-    git clone -b RGB-Camera https://github.com/BOCK-AI/BAVT/   
+    (**ONLY ONCE THIS HAS TO BE CLONED.**)
+    ```  
+    git https://github.com/BOCK-AI/BAVT/   
     cd BAVT   
     ```
     
