@@ -31,7 +31,7 @@ Now, we are ready to clone the repository.
     ```
     (C:/carla_0.9.15/PythonAPI/examples/BAVT)
     ```
-           
+            
     *FOR LINUX:*   
     Clone the `Depth-Sensing-camera` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
     Here, I am assuming you have cloned BAVT 'main' branch from previous **3-D-LIDAR** README Documentation.
@@ -83,7 +83,7 @@ Now, we are ready to clone the repository.
 7.  **What You’ll See**
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
-      * Live Location readings from simulator in terminal every 0.05 seconds. This includes: Latitude, Longitude, Altitude, Frame, Timestamp.
+      * An OpenCV window showing the Logarithmic Depth output is seen, titled "Depth sensing camera".
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. Can be modified. I find it convenient.)
   
      
