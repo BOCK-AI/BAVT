@@ -86,7 +86,7 @@ Congratulations\! You are now ready to get started with the world of CARLA.
 
 -----
 
-### Instructions to use `lidar3d_and_radar.py`:
+### Instructions to use `6sensors.py`:
 
 Firstly, run this command, which makes sure you clone the repo into the right folder.   
 Start from HOME directory (```~/```) in your linux terminal.    
@@ -200,4 +200,23 @@ Ctrl + '-' -> to make points smaller.
 -----
       
 ## **Technical Report: CARLA 3D-LIDAR and RADAR Streaming with PID-Based Lane Following**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
