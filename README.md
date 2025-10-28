@@ -101,7 +101,7 @@ For Windows, Start from C: Folder in cmd.
   ```
   cd carla_0.9.15/PythonAPI/examples
   ```
-  (Clone only the first time. Do not need to clone repeatedly.)
+  - **(NOTE: Clone only the first time. Do not need to clone repeatedly.)**
 Now, we are ready to clone the repository.
 
 1.  **Clone the Repository and switch branch**
@@ -120,7 +120,7 @@ Now, we are ready to clone the repository.
     ```
            
     *FOR LINUX:*   
-    Clone the `3-D-LIDAR` branch of this repository and navigate into the `BAVT` directory. Run these commands in your terminal or command prompt:      
+    Run these commands in your terminal or command prompt:      
     ```
     git clone https://github.com/BOCK-AI/BAVT/
     cd BAVT
@@ -129,11 +129,11 @@ Now, we are ready to clone the repository.
     ```
     git branch -a
     ```
-    Now we switch to 3-D-LIDAR branch : (Switch branches using ```git checkout```)
+    Now we switch to 3-D-LIDAR branch : (Switches branches using ```git checkout```)
     ```
-    git checkout 3-D-LIDAR
+    git checkout 6-SENSORS
     ```
-    You can see all branches on your system using:
+    You can see all branches on *your* system using:
     ```
     git branch
     ```   
@@ -142,7 +142,7 @@ Now, we are ready to clone the repository.
     Install the required Python libraries.
 
     ```bash
-    pip install carla numpy opencv-python open3d matplotlib
+    pip install carla numpy opencv-python
     ``` 
 
 4.  **Run CARLA Server**
