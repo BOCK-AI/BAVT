@@ -106,9 +106,8 @@ Now, we are ready to clone the repository.
 1.  **Clone the Repository and switch branch**
   - **(NOTE: Clone only the first time. Do not need to clone repeatedly.)**                     
   - **(NOTE: If repository is already cloned, Only need to SWITCH BRANCH. Go to **SWITCHING BRANCH:** subsection below. )**                                          
-                                   
+    *FOR WINDOWS:*                                
     **CLONING: (FIRST TIME ONLY)**                
-    *FOR WINDOWS:*   
     It is easier for Linux users to use Git than Windows users. Thus, I suggest downloading zip and extracting the contents into te BAVT folder we will create below.                      
     To Create a BAVT folder: (only first time)         
     ```
@@ -122,8 +121,8 @@ Now, we are ready to clone the repository.
     (C:/carla_0.9.15/PythonAPI/examples/BAVT)
     ```
 
-    **CLONING: (FIRST TIME ONLY)**                
-    *FOR LINUX:*   
+    *FOR LINUX:*
+    **CLONING: (FIRST TIME ONLY)**                 
     Run these commands in your terminal or command prompt:      
     ```
     git clone https://github.com/BOCK-AI/BAVT/
