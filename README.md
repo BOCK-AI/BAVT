@@ -20,7 +20,7 @@ If you don't have python on your system, or have a different version, then pleas
   sudo apt install python3.10
   ```    
 
-* *FOR WINDOWS:*
+* *FOR WINDOWS:*             
 1. Please follow this tutorial for CRYSTAL CLEAR instructions on how to download python.     
    (Change python 3.8 to 3.10 wherever needed.).    
    `https://tutedude.com/blogs/product/how-to-install-python-on-windows-10-a-guide-for-developers-new-to-python/`      
@@ -105,8 +105,9 @@ Now, we are ready to clone the repository.
 
 1.  **Clone the Repository and switch branch**
   - **(NOTE: Clone only the first time. Do not need to clone repeatedly.)**                     
-  - **(NOTE: If repository is already cloned, Only need to SWITCH BRANCH. Go to **SWITCHING BRANCH:** subsection below. )**                                          
-    *FOR WINDOWS:*                                
+  - **(NOTE: If repository is already cloned, Only need to SWITCH BRANCH. Go to **SWITCHING BRANCH:** subsection below. )**
+           
+    **<ins>FOR WINDOWS:</ins>**                                 
     **CLONING: (FIRST TIME ONLY)**                
     It is easier for Linux users to use Git than Windows users. Thus, I suggest downloading zip and extracting the contents into te BAVT folder we will create below.                      
     To Create a BAVT folder: (only first time)         
@@ -121,7 +122,7 @@ Now, we are ready to clone the repository.
     (C:/carla_0.9.15/PythonAPI/examples/BAVT)
     ```
 
-    *FOR LINUX:*
+    **<ins>FOR LINUX:</ins>**                                                  
     **CLONING: (FIRST TIME ONLY)**                 
     Run these commands in your terminal or command prompt:      
     ```
