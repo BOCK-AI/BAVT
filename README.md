@@ -134,7 +134,7 @@ Now, we are ready to clone the repository.
     ```
     git branch -a
     ```
-    Now we switch to 3-D-LIDAR branch : (Switches branches using ```git checkout```)
+    Now we switch to 6-SENSOR branch : (Switches branches using ```git checkout```)
     ```
     git checkout 6-SENSORS
     ```
