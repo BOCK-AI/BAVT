@@ -129,7 +129,7 @@ Now, we are ready to clone the repository.
     git clone https://github.com/BOCK-AI/BAVT/
     cd BAVT
     ```
-    **SWITCHING BRANCH:**
+    **SWITCHING BRANCH:**                          
     We must make sure we are in the BAVT directory:
     ```
     cd BAVT
