@@ -129,7 +129,11 @@ Now, we are ready to clone the repository.
     git clone https://github.com/BOCK-AI/BAVT/
     cd BAVT
     ```
-    **SWITCHING BRANCH:**                         
+    **SWITCHING BRANCH:**
+    We must make sure we are in the BAVT directory:
+    ```
+    cd BAVT
+    ```             
     Now we must navigate to the right branch on terminal: (This command is used for seeing All the existing Branches in the GitHub repo.)
     ```
     git branch -a
