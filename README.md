@@ -175,12 +175,8 @@ Now, we are ready to clone the repository.
 7.  **What You’ll See**
 
       * A **Tesla Model 3** driving automatically in the CARLA world, following the road.
-      * A live OpenCV window ('All Cameras') displaying the **RGB camera feed**, **Semantic Segmentation camera feed**, **Instance Segmentation camera feed**, **Depth camera feed**, **Dynamic Vision Sensing camera feed**, **Optical Flow Camera feed** from the vehicle's front camera.
-      * Each camera will be visible with clarity. 
+      * 
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. It can be modified.)
-          
-<img width="725" height="825" alt="image" src="https://github.com/user-attachments/assets/ec153c2f-8a13-442b-80fa-bab1ff00e312" />
-
       
 
 6.  **How to Exit**
