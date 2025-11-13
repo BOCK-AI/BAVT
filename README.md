@@ -195,6 +195,56 @@ Now, we are ready to clone the repository.
  - ctrl + shift + t - for a new tab in the current terminal window.
  - ctrl + shift + n - for a new terminal window.
                
+-----## **Technical Report: CARLA IMU Sensor Data Streaming with PID-Based Lane Following**
+
+### 1. Overview
+This Python script provides a comprehensive example of interfacing with the CARLA autonomous driving simulator. Its primary functions are:
+1.  **Spawning** a vehicle and an IMU (Inertial Measurement Unit) sensor.
+2. **Attaching** the IMU to the vehicle.
+3.  **Listening** to the IMU sensor data using a callback and printing formatted data (Accelerometer, Gyroscope, Compass) to the console.
+4.  **Implementing** a PID-controlled autonomous driving agent that follows the road's waypoints.
+5.  **Managing** the simulation in synchronous mode for deterministic behavior.
+6.  **Providing** robust setup and cleanup, including a "chase cam" spectator view.
+   
+### 2. Features  
+* **Synchronous Mode:** Ensures that simulation physics and sensor data are perfectly aligned by using a fixed time-step (`fixed_delta_seconds = 0.05`).
+* **Sensor Callback:** Uses the `sensor.listen()` method to asynchronously (from the script's main thread) process IMU data as soon as it's available from the simulator tick.
+* **Live Data Display:** Prints formatted IMU data to the console without spamming new lines by using the `\r` carriage return.
+* **PID Controller:** Includes a self-contained `PIDController` class to manage steering control.
+* **Waypoint Following:** Implements a control loop that:
+  * Finds the vehicle's current waypoint.
+  * Calculates a target waypoint 2.0 meters ahead.
+  * Calculates the **cross-track error** using a vector cross-product.
+  * Feeds this error into the PID controller to get a steering correction.
+  * **Spectator "Chase Cam":** The spectator camera is programmatically set to follow the vehicle from behind. 
+* **Robust Cleanup:** Uses a `try...finally` block to ensure all actors are destroyed and the simulator is returned to asynchronous mode on exit, even if an error occurs.
+
+### 3. Prerequisites  
+* A running CARLA simulator instance (defaults to `localhost:2000`).
+* Python 3.x
+* Required Python libraries:
+* `carla`: The CARLA client library.
+* `numpy`: For vector and cross-product calculations.
+* `opencv-python` (`cv2`): Used only for the `cv2.waitKey()` function to detect the 'q' exit key
+
+
+### 4. How to Run
+1. Start the CARLA simulator.
+2. Execute the script from your terminal:```bash    python your_script_name.py    ```
+3. An empty OpenCV window titled "CARLA Control" will appear. Keep this window in focus.
+4. Press the **'q'** key to gracefully exit the script, clean up actors, and stop the simulation.
+
+
 -----
 
+### 5. Core Components & Architecture
+The script is built around the `main()` function and two key helper components: the `imu_callback` function and the `PIDController` class.
+#### 5.1. Setup and Connection (in `main()`)
+1.  **Client Connection:** A `carla.Client` is instantiated and connects to the simulator.
+2.  **World & Settings:** The script gets the `world` object and retrieves its settings.
+3.  **Synchronous Mode:** This is a critical step.
+* `settings.synchronous_mode = True` tells the simulator to pause and wait for a "tick" command from the client. 
+* `settings.fixed_delta_seconds = 0.05` sets the physics time-step to 0.05 seconds (20 FPS).
+* `world.apply_settings(settings)` commits these changes.
 
+#### 5.2. Actor Spawning (in `main()`)1. **Vehicle:** A `vehicle.tesla.model3` is spawned at a random spawn point and added to the `actors` list for later cleanup.2.  **Spectator Camera:** A nested function `update_spectator()` is defined. It calculates a position 4m behind and 2.5m above the vehicle *relative to the vehicle's transform* and moves the spectator camera there.3.  **IMU Sensor:**      * An `sensor.other.imu` blueprint is found.      * Its `sensor_tick` is set to match the world's `fixed_delta_seconds` to ensure 1:1 data generation with physics steps.      * The IMU is spawned and **attached** to the `vehicle` at a slight offset.      * The sensor is added to the `actors` list.#### 5.3. IMU Data Handling (`imu_callback` & `imu.listen()`)  * **`imu.listen(imu_callback)`:** This line registers the `imu_callback` function. After every `world.tick()`, the simulator will generate new IMU data and automatically call this function, passing the `imu_data` object to it.  * **`imu_callback(imu_data)`:**      * **Input:** `imu_data` (a `carla.ImuMeasurement` object).      * **Action:** It accesses the `accelerometer`, `gyroscope`, and `compass` attributes.      * **Note on Compass:** The script correctly identifies that `imu_data.compass` provides the heading in **radians**. It converts this to degrees by multiplying by `180/pi`.      * **Output:** Prints the formatted data to a single, updating line in the console.#### 5.4. Control Logic (`PIDController` & Main Loop)1.  **`PIDController` Class:**      * `__init__(self, Kp, Ki, Kd)`: Initializes the controller with Proportional, Integral, and Derivative gains.      * `run_step(self, error, dt)`: The core logic. It calculates the integral and derivative terms based on the current `error` and time delta (`dt`), then returns the final control output: $Kp \cdot error + Ki \cdot integral + Kd \cdot derivative$.2.  **Main Loop Logic (`while True`)**      * **`world.tick()`:** The **most important** call. This commands the simulator to advance one step (0.05s). All physics are calculated, and all sensors (like the IMU) are triggered.      * **`update_spectator()`:** The "chase cam" is updated to the vehicle's new position.      * **Waypoint Calculation:**        1.  The vehicle's current location is used to find the nearest `waypoint` on the road.        2.  `waypoint.next(2.0)[0]` gets the next waypoint 2.0 meters down the lane. This is the **target**.      * **Error Calculation (Cross-Track Error):**        1.  `v_forward`: The vehicle's current forward-facing vector.        2.  `target_vector`: The vector from the vehicle's location to the target waypoint's location.        3.  `np.cross(...)`: The 3D cross product is calculated between the *forward vector* and the *target vector*. The **Z-component** of this resulting vector is the cross-track error.              * If `z > 0`, the target is to the vehicle's right.              * If `z < 0`, the target is to the vehicle's left.              * If `z == 0`, the target is dead ahead.      * **Control Application:**        1.  The `steer_correction` is calculated by feeding the `cross_track_error` into `pid.run_step()`.        2.  The output is clamped (using `np.clip`) to the valid range `[-1.0, 1.0]`.        3.  A new `carla.VehicleControl` object is created with a constant throttle (0.4) and the calculated `steer_correction`.        4.  `vehicle.apply_control(control)` sends the command to the vehicle.      * **Exit Condition:** `cv2.waitKey(1)` checks if a key has been pressed. If it's 'q', the loop breaks.#### 5.5. Cleanup (`finally` block)This block executes **no matter what**, ensuring the simulator is not left in a broken state.1.  **Stop Sensor:** `imu.stop()` is called to stop the `listen()` callback.2.  **Destroy Actors:** Iterates through the `actors` list (containing the vehicle and IMU) and calls `a.destroy()` on each.3.  **Revert Settings:** The script gets the world settings again, sets `synchronous_mode = False`, and applies them. This is critical for returning the simulator to its normal, real-time state.4.  **Close Windows:** `cv2.destroyAllWindows()` closes the OpenCV window.-----
