@@ -195,7 +195,8 @@ Now, we are ready to clone the repository.
  - ctrl + shift + t - for a new tab in the current terminal window.
  - ctrl + shift + n - for a new terminal window.
                
------## **Technical Report: CARLA IMU Sensor Data Streaming with PID-Based Lane Following**
+-----
+## **Technical Report: CARLA IMU Sensor Data Streaming with PID-Based Lane Following**
 
 ### 1. Overview
 This Python script provides a comprehensive example of interfacing with the CARLA autonomous driving simulator. Its primary functions are:
