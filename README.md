@@ -211,20 +211,18 @@ Now, we are ready to clone the repository.
       * Going up a small incline
     
       IMU might read:             
-        * Accelerometer:              
-        ```       
-        x = +2.5   (car speeding up)    <br>           
-        y = +0.3   (turning left, small sideways push)            <br>
-        z   = 9.8    (gravity)                  <br>
+        * Accelerometer:
+        ```x  = +2.5   (car speeding up)
+           y  = +0.3   (turning left, small sideways push)
+           z  = 9.8    (gravity)                  
         ```                  
         * Gyroscope:                    
-        ```                                  
-        x = 0.0    (vehicle not rolling)     <br>                     
-        y = +0.1   (nose slightly going up)      <br>          
-        z = 0.4    (yaw: turning left)               <br>          
+        ```x  = 0.0    (vehicle not rolling)           <br>                     
+           y = +0.1   (nose slightly going up)        <br>          
+           z = 0.4    (yaw: turning left)             <br>          
         ```                                
         It makes sense now, hopefully!                                    
-<br>s
+<br>
     ##### Overview:
       **Accelerometer = pushes**
       * x = forward/back
