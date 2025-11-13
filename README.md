@@ -212,7 +212,8 @@ Now, we are ready to clone the repository.
     
       IMU might read:             
         * Accelerometer:
-        ```x  = +2.5   (car speeding up)
+        ```
+           x   = +2.5   (car speeding up)
     
            y  = +0.3   (turning left, small sideways push)
     
