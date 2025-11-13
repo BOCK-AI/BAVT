@@ -178,7 +178,7 @@ Now, we are ready to clone the repository.
       * IMU Sensor readings will be seen in terminal. Accelerometer readings, Gyroscope readings, Compass Direction readings.
       * Explanation is provided below.
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. It can be modified.)
-                <br>
+                <
     #### IMU Sensor output Understanding:                        
       Think of the IMU as a sensor that feels the **pushes and spins** of the vehicle.
       #####  1. ACCELEROMETER (x, y, z)
@@ -213,16 +213,21 @@ Now, we are ready to clone the repository.
       IMU might read:             
         * Accelerometer:
         ```x  = +2.5   (car speeding up)
+    
            y  = +0.3   (turning left, small sideways push)
+    
            z  = 9.8    (gravity)                  
         ```                  
         * Gyroscope:                    
-        ```x  = 0.0    (vehicle not rolling)           <br>                     
-           y = +0.1   (nose slightly going up)        <br>          
-           z = 0.4    (yaw: turning left)             <br>          
+        ```
+           x   = 0.0    (vehicle not rolling)
+                                  
+           y = +0.1   (nose slightly going up)                   
+
+           z = 0.4    (yaw: turning left)                        
         ```                                
         It makes sense now, hopefully!                                    
-<br>
+ 
     ##### Overview:
       **Accelerometer = pushes**
       * x = forward/back
