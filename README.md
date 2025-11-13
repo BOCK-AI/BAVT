@@ -179,7 +179,7 @@ Now, we are ready to clone the repository.
       * Explanation is provided below.
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. It can be modified.)
                 <br>
-    ####**IMU Sensor output Understanding:
+    #### **IMU Sensor output Understanding:                        
       **Think of the IMU as a sensor that feels the **pushes and spins** of the vehicle.
       #####  1. ACCELEROMETER (x, y, z)
       It tells you **how the car is being pushed**.
