@@ -128,8 +128,8 @@ Now, we are ready to clone the repository.
     ```
     **SWITCHING BRANCH:**                         
     Now we must navigate to the right branch on terminal: (This command is used for seeing All the existing Branches in the GitHub repo.)
-    ```
-    cd BAVT    
+    ```              
+    cd BAVT                
     git branch -a
     ```
     Now we switch to IMU-Sensor branch : (Switches branches using ```git checkout```)
