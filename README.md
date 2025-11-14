@@ -181,34 +181,34 @@ Now, we are ready to clone the repository.
       * In the simulator, you will be positioned to spectate behind the car. (This is done using the Spectator class of CARLA. It can be modified.)
                 
     #### IMU Sensor output Understanding:                        
-      Think of the IMU as a sensor that feels the **pushes and spins** of the vehicle.
-      #####  1. ACCELEROMETER (x, y, z)
-      It tells you **how the car is being pushed**.
-      Imagine you're sitting in a car:
-        ######  **x-axis (forward/backward push)**
-        * Car accelerates → you feel pushed **back** into the seat → **+x**
-        * Car brakes → you lurch **forward** → **–x**
-        ######  **y-axis (sideways push)**
-        * Car turns left → you feel pushed **right** → **+y**
-        * Car turns right → you feel pushed **left** → **–y**
-        ######  **z-axis (up/down push)**
-        * Gravity always pushes down → ~9.8 m/s²
-        * If car goes over a bump → z briefly increases
-        * If car drops down → z decreases
-      #####  2. GYROSCOPE (x, y, z)
-      This measures **how fast the car is rotating**.
-      Think of holding a phone and rotating it:
-      ######  **x-axis (roll)** 
-      Car tilts **sideways** (like when climbing a slanted road)
-      ######  **y-axis (pitch)**
-      Car tilts **forward/back** (braking → nose dips down, accelerating → nose lifts)
-      ######  **z-axis (yaw)**
-      Car rotates **left or right** (turning at an intersection)
+      Think of the IMU as a sensor that feels the **pushes and spins** of the vehicle.                                         
+      #####  1. ACCELEROMETER (x, y, z)                                  
+      It tells you **how the car is being pushed**.                             
+      Imagine you're sitting in a car:                                             
+        ######  **x-axis (forward/backward push)**                            
+        * Car accelerates → you feel pushed **back** into the seat → **+x**         
+        * Car brakes → you lurch **forward** → **–x**             
+        ######  **y-axis (sideways push)**               
+        * Car turns left → you feel pushed **right** → **+y**               
+        * Car turns right → you feel pushed **left** → **–y**                 
+        ######  **z-axis (up/down push)**                                
+        * Gravity always pushes down → ~9.8 m/s²                   
+        * If car goes over a bump → z briefly increases              
+        * If car drops down → z decreases                          
+      #####  2. GYROSCOPE (x, y, z)                               
+      This measures **how fast the car is rotating**.                 
+      Think of holding a phone and rotating it:                       
+      ######  **x-axis (roll)**                                     
+      Car tilts **sideways** (like when climbing a slanted road)            
+      ######  **y-axis (pitch)**                                                
+      Car tilts **forward/back** (braking → nose dips down, accelerating → nose lifts)                                 
+      ######  **z-axis (yaw)**                      
+      Car rotates **left or right** (turning at an intersection)             
 
-      ##### **A SIMPLE, REAL EXAMPLE**
-      Suppose your car is:
-      * Driving straight and accelerating
-      * Slightly turning left
+      ##### **A SIMPLE, REAL EXAMPLE**                       
+      Suppose your car is:                                 
+      * Driving straight and accelerating                      
+      * Slightly turning left                   
       * Going up a small incline
     
       IMU might read:             
