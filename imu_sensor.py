@@ -1,20 +1,8 @@
 #!/usr/bin/env python
 import carla
 import random
-import cv2
-import queue # Note: queue is imported but not used in this version, could be used for advanced data handling
 import numpy as np
 import time
-
-# --- Constants ---
-# These were in your original code but not used for the IMU.
-# They are good to keep if you add a LiDAR or camera later.
-IMG_SIZE = 500
-CENTER = IMG_SIZE // 2
-SCALE = 5.0  # pixels per meter
-MAX_RANGE = 50  # meters
-IM_WIDTH = 640
-IM_HEIGHT = 480
 
 # --- Sensor Callback ---
 
@@ -39,7 +27,6 @@ def imu_callback(imu_data):
           f"Compass: {compass_heading: 6.2f}°   ", end="")
 
 # --- PID Controller ---
-
 class PIDController:
     """
     A simple Proportional-Integral-Derivative (PID) controller.
@@ -117,9 +104,6 @@ def main():
         # 6. Setup PID controller for steering
         pid = PIDController(Kp=1.0, Ki=0.0, Kd=0.2)
         
-        # This window is from your original code, used for the exit key 'q'
-        cv2.namedWindow("CARLA Control", cv2.WINDOW_AUTOSIZE)
-
         # 7. Prime the simulation
         for _ in range(2):
             world.tick()
@@ -162,10 +146,6 @@ def main():
             control.steer = steer_correction
             vehicle.apply_control(control)
 
-            # Check for 'q' key to exit
-            if cv2.waitKey(1) & 0xFF == ord("q"):
-                print("\nExiting loop.")
-                break
 
     except KeyboardInterrupt:
         print("\nInterrupted by user (Ctrl+C)")
@@ -198,9 +178,6 @@ def main():
                 print("Reverted to asynchronous mode.")
             except Exception as e:
                 print(f"Error reverting world settings: {e}")
-
-        cv2.destroyAllWindows()
-        print("All Cleaned Up! Exiting.")
 
 if __name__ == "__main__":
     main()
