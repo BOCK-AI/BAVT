@@ -185,24 +185,24 @@ Now, we are ready to clone the repository.
       #####  1. ACCELEROMETER (x, y, z)                                  
       It tells you **how the car is being pushed**.                             
       Imagine you're sitting in a car:                                             
-        ######  **x-axis (forward/backward push)**                            
+       ######  x-axis (forward/backward push)                           
         * Car accelerates → you feel pushed **back** into the seat → **+x**         
         * Car brakes → you lurch **forward** → **–x**             
-        ######  **y-axis (sideways push)**               
+       ######  y-axis (sideways push)               
         * Car turns left → you feel pushed **right** → **+y**               
-        * Car turns right → you feel pushed **left** → **–y**                 
-        ######  **z-axis (up/down push)**                                
+        * Car turns right → you feel pushed **left** → **–y**
+       ###### z-axis (up/down push)**                                
         * Gravity always pushes down → ~9.8 m/s²                   
         * If car goes over a bump → z briefly increases              
         * If car drops down → z decreases                          
       #####  2. GYROSCOPE (x, y, z)                               
       This measures **how fast the car is rotating**.                 
       Think of holding a phone and rotating it:                       
-      ######  **x-axis (roll)**                                     
+      ######  x-axis (roll)                                     
       Car tilts **sideways** (like when climbing a slanted road)            
-      ######  **y-axis (pitch)**                                                
+      ######  y-axis (pitch)                                                
       Car tilts **forward/back** (braking → nose dips down, accelerating → nose lifts)                                 
-      ######  **z-axis (yaw)**                      
+      ######  z-axis (yaw)                      
       Car rotates **left or right** (turning at an intersection)             
 
       ##### **A SIMPLE, REAL EXAMPLE**                       
@@ -228,7 +228,9 @@ Now, we are ready to clone the repository.
 
            z = 0.4    (yaw: turning left)                        
         ```                                
-        It makes sense now, hopefully!                                    
+        It makes sense now, hopefully!
+    <img width="281" height="180" alt="image" src="https://github.com/user-attachments/assets/a03850c7-01eb-4c7b-b902-bd3d2902110d" />
+                               
  
     ##### Overview:
       **Accelerometer = pushes**
@@ -239,7 +241,8 @@ Now, we are ready to clone the repository.
       * x = roll
       * y = pitch
       * z = yaw
-   
+   <img width="276" height="183" alt="image" src="https://github.com/user-attachments/assets/cd2652bb-15de-4e30-b8bb-225b43a79102" />
+
       
 
 6.  **How to Exit**
