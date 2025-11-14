@@ -145,7 +145,7 @@ Now, we are ready to clone the repository.
     Install the required Python libraries.
 
     ```bash
-    pip install carla numpy opencv-python
+    pip install carla numpy 
     ``` 
 
 4.  **Run CARLA Server**
