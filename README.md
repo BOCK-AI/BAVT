@@ -194,7 +194,8 @@ Now, we are ready to clone the repository.
        ###### z-axis (up/down push)**                                
         * Gravity always pushes down → ~9.8 m/s²                   
         * If car goes over a bump → z briefly increases              
-        * If car drops down → z decreases                          
+        * If car drops down → z decreases
+                                     
       #####  2. GYROSCOPE (x, y, z)                               
       This measures **how fast the car is rotating**.                 
       Think of holding a phone and rotating it:                       
@@ -219,7 +220,8 @@ Now, we are ready to clone the repository.
            y  = +0.3   (turning left, small sideways push)
     
            z  = 9.8    (gravity)                  
-        ```                  
+        ```
+                     
         * Gyroscope:                    
         ```
            x   = 0.0    (vehicle not rolling)
