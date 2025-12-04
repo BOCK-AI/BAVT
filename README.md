@@ -231,7 +231,7 @@ Now, we are ready to clone the repository.
      z = 0.4    (yaw: turning left)                        
   ```                                
 
-  Hope it makes more sense now!
+  Hope it makes more sense now!                
   <img width="281" height="180" alt="image" src="https://github.com/user-attachments/assets/a03850c7-01eb-4c7b-b902-bd3d2902110d" />
                                
  
