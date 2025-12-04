@@ -214,22 +214,22 @@ Now, we are ready to clone the repository.
     
       IMU might read:             
 - Accelerometer:
-        ```                         
-           x   = +2.5   (car speeding up)
-    
-           y  = +0.3   (turning left, small sideways push)
-    
-           z  = 9.8    (gravity)                  
-        ```
+  ```                       
+     x   = +2.5   (car speeding up)
+
+     y  = +0.3   (turning left, small sideways push)
+
+     z  = 9.8    (gravity)                  
+  ```
 
 - Gyroscope:                    
-        ```
-           x   = 0.0    (vehicle not rolling)
-                                  
-           y = +0.1   (nose slightly going up)                   
+  ```
+     x   = 0.0    (vehicle not rolling)
+                            
+     y = +0.1   (nose slightly going up)                   
 
-           z = 0.4    (yaw: turning left)                        
-        ```                                
+     z = 0.4    (yaw: turning left)                        
+  ```                                
         It makes sense now, hopefully!
     <img width="281" height="180" alt="image" src="https://github.com/user-attachments/assets/a03850c7-01eb-4c7b-b902-bd3d2902110d" />
                                
