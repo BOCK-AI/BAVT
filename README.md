@@ -236,14 +236,14 @@ Now, we are ready to clone the repository.
                                
  
     ##### Overview:
-    **Accelerometer = pushes**
-      - x = forward/back
-      - y = left/right
-      - z = up/down                   
-    **Gyroscope = spins**
-      - x = roll
-      - y = pitch
-      - z = yaw
+    **Accelerometer = pushes**                  
+      - x = forward/back                          
+      - y = left/right                   
+      - z = up/down                       
+    **Gyroscope = spins**                        
+      - x = roll                       
+      - y = pitch                      
+      - z = yaw                             
    <img width="276" height="183" alt="image" src="https://github.com/user-attachments/assets/cd2652bb-15de-4e30-b8bb-225b43a79102" />
 
       
