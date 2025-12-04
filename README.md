@@ -191,7 +191,7 @@ Now, we are ready to clone the repository.
        ######  y-axis (sideways push)               
         * Car turns left → you feel pushed **right** → **+y**               
         * Car turns right → you feel pushed **left** → **–y**
-       ###### z-axis (up/down push)**                                
+       ###### z-axis (up/down push)                                
         * Gravity always pushes down → ~9.8 m/s²                   
         * If car goes over a bump → z briefly increases              
         * If car drops down → z decreases
@@ -230,19 +230,20 @@ Now, we are ready to clone the repository.
 
      z = 0.4    (yaw: turning left)                        
   ```                                
-        It makes sense now, hopefully!
-    <img width="281" height="180" alt="image" src="https://github.com/user-attachments/assets/a03850c7-01eb-4c7b-b902-bd3d2902110d" />
+
+  Hope it makes more sense now!
+  <img width="281" height="180" alt="image" src="https://github.com/user-attachments/assets/a03850c7-01eb-4c7b-b902-bd3d2902110d" />
                                
  
     ##### Overview:
     **Accelerometer = pushes**
-      * x = forward/back
-      * y = left/right
-      * z = up/down                   
+      - x = forward/back
+      - y = left/right
+      - z = up/down                   
     **Gyroscope = spins**
-      * x = roll
-      * y = pitch
-      * z = yaw
+      - x = roll
+      - y = pitch
+      - z = yaw
    <img width="276" height="183" alt="image" src="https://github.com/user-attachments/assets/cd2652bb-15de-4e30-b8bb-225b43a79102" />
 
       
