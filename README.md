@@ -213,7 +213,7 @@ Now, we are ready to clone the repository.
       * Going up a small incline
     
       IMU might read:             
-        * Accelerometer:
+- Accelerometer:
         ```                         
            x   = +2.5   (car speeding up)
     
@@ -221,8 +221,8 @@ Now, we are ready to clone the repository.
     
            z  = 9.8    (gravity)                  
         ```
-                     
-        * Gyroscope:                    
+
+- Gyroscope:                    
         ```
            x   = 0.0    (vehicle not rolling)
                                   
@@ -235,11 +235,11 @@ Now, we are ready to clone the repository.
                                
  
     ##### Overview:
-      **Accelerometer = pushes**
+    **Accelerometer = pushes**
       * x = forward/back
       * y = left/right
-      * z = up/down
-      **Gyroscope = spins**
+      * z = up/down                   
+    **Gyroscope = spins**
       * x = roll
       * y = pitch
       * z = yaw
